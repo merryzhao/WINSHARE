@@ -1,0 +1,8 @@
+/* help page clash */
+
+.process_menu li a {text-align: left}
+.delivery_info .orange21b {color: #f90;font-size: 24px;margin: 14px 20px 0 0;}
+#help_r .table td {border: 1px solid #eee;}
+.layout {width: 1210px;}
+.left_box {padding-top:10px;}
+.right_box {float: left;margin-left: 8px;}

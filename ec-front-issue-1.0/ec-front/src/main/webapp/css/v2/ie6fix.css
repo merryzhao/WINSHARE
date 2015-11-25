@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-05-16 11:08:51
+ * @version $Id$
+ */
+
+
+/* IE6 FIX */
+/* 16bit png bg */
+.icon16,.top-nav .link-list-user b,.top-nav .li-4 .mobile-icon,.master-header .master-search b,.master-header .master-user-box b,.master-header .master-user-box s,.master-header .master-user-box .master-cartnum-pop,.mian-detail .info-main .express .store b,.mian-detail .info-main .express .store-pop-main .close,.col-cascade-tab .tab-1 .tab-item i,.mian-detail .info-side .share .zoom-btn b,.cell-style-1 .tag,.cell-style-3 .operation,.mian-detail .assemble-total .operation,.comment-star .star-list dd .star,.comment-star .grade .star-big b,.master-comment .comment-normal-list .comment-user-star,.master-header .master-user-sc-pop .no-goods .no-goods-main b,.master-consult .consult-policy-item .tag,.col-master-popwindow .title .close,.master-consult .reply-floor .reply-floor-arrow,.main-service .main-service-list dt b,.master-nav .interaction-menu h2 b,.master-menu-pop .item .item-title b,.col-base-2 .lift .lift-purchase .lift-title,.mian-detail .info-side .img .zoom {_background-image: url(images/common-bg16.png);}
+.btn-1,.buy-btn-1,.buy-btn-2,.buy-btn-3,.buy-btn-4,.collect-btn,.comment-star .grade .comment-btn-1,.master-comment .comment-master-avtive .comment-btn-3,.master-consult .consult-policy .consult-policy-question .consult-btn,.master-consult .consult-master-avtive .comment-btn-3,.master-comment .comment-normal-list .comment-avtive .comment-btn-2,.master-comment .comment-normal-list .comment-avtive .comment-btn-3,.common-item-none .comment-btn-3,.master-consult .consult-normal-list .consult-btn-1,.master-comment .comment-btn-4,.form-normal-list .form-item .button,.mian-detail .info-main .name .ebook-tip .ebook-view-btn,.top-nav .mobile-code-item a,.master-header .master-user-sc-pop .master-user-carttotal .total-active .total-active-btn {_background-image: url(images/common-btn16.png);}
+
+.interaction-menu .item-pop .base-nav a {float: none;}
+.master-header .user-hot .user-hot-list li a {cursor: pointer;}
+.cell-style-1 .img img {_width: 55px; _height: 55px;}
+.cell-style-2 .img img {_width: 160px;_height:160px;}
+.cell-style-3 .img img {_width: 130px;_height: 130px;}
+.col-base-1 .tab,.col-base-2 .tab,.col-cascade-tab .tab-1 {_overflow:hidden;}
+.col-base-1 .tab-item,.col-base-2 .tab-item,.col-cascade-tab .tab-1 .tab-item {_position:relative;}
+.col-base-2 .lift .lift-purchase a,.col-base-2 .lift .lift-purchase .lift-title {margin-bottom: -100px;padding-bottom: 110px; float: left;}
+.col-more-1-tab .tab-item {display: inline;}
+.list-text-4 li a {_display: inline-block;}
+.mian-detail .info-main .express .store {display: inline;}
+.mian-detail .info-main .express .store-input {display: inline!important;}
+.col-user-sc .list-base-1 {_height: auto!important;_height: 380px;_position: relative;}
+.mian-detail .cell-detail {_height:auto!important;_height: 460px;}
+.master-header .master-user-sc-pop {right: -1px;}
+.col-master-popwindow {_position: absolute;border:5px solid #eee; }
+.col-master-popwindow .cut-price-notice {padding-top: 14px; height: 60px;}
+.slave-banner .s1of3 {_display: inline;}
+.master-consult .consult-normal-list a.fr {position: absolute; right: 0;}
+.col-more-1-tab .tab {_overflow: hidden;}

@@ -1,0 +1,19 @@
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Twiceler
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: *
+Allow: /
+Disallow: /product/question/
+
+User-agent: Baiduspider
+Request-rate: 60/1m 0000-0800
+Request-rate: 30/1m 0800-2400
+
+User-agent: EtaoSpider
+Request-rate: 30/1m 0000-2400

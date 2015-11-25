@@ -1,0 +1,67 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,em,img,strong,b,i,table,caption{margin:0;padding:0;}
+ol,ul,dl{list-style:none;}
+body{background:#fff;font:12px/1.5em '\5B8B\4F53';color:#646464;}
+a{color:#000;text-decoration:none}
+a:hover{text-decoration:underline;color:#ed7c00;}
+a img{border:none}
+.link1{color:#1d66b2;}
+.link2{color:#1a66b1;text-decoration:underline;}
+.l_gray{color:#9d9d9d;}
+.red{color:#ff0101;}
+.layout,.footer,.wid990,.header{width:990px;margin:0 auto;clear:both;float:none;}
+.fix{*zoom:1}.fix:after{display:block;content:"clear";height:0;clear:both;overflow:hidden;visibility:hidden}
+.reg_header{ height:82px; background:url(loginbg.png) repeat-x 0 -349px;}
+.reg_header a{ display:block; width:208px; height:82px;background:url(loginbg.png) no-repeat 0 -217px; text-indent:-9999px; overflow:hidden;}
+.reg_box{ margin:50px auto; border:#ececec solid 2px; background:#fcfcfc;}
+.reg_box h1{ color:#cd0c27; font-size:16px; text-align:center;background:url(loginbg.png) repeat-x 0 -173px; height:39px; line-height:39px;}
+.reg_box table{ margin:30px 0;}
+.reg_box td{ padding:2px 3px; color:#4d5352;}
+.reg_box .right{ text-align:right; font-size:14px;}
+.reg_box input,.reg_box img{ vertical-align:middle;}
+.w_input,.n_input,.red_input{ height:25px;color:#4d5352;line-height:25px; border:#e4e4e4 solid 1px; width:200px; margin-right:8px;}
+.n_input{width:100px;}
+.red_input{border:#cd0b27 solid 1px;}
+.reg_but{ width:139px;height:50px;border:none;background:url(loginbg.png) no-repeat 0 -119px; cursor:pointer;}
+.send_but{ width:153px; height:35px;border:none;background:url(loginbg.png) no-repeat 0 -31px; cursor:pointer;}
+.login_but{width:138px; height:48px;border:none;background:url(loginbg.png) no-repeat 0 -67px; cursor:pointer;}
+.ok_but{width:100px; height:31px;border:none;background:url(loginbg.png) no-repeat 0 0; cursor:pointer;}
+.input_r{ display:inline-block; width:15px; height:11px;background:url(loginbg.png) no-repeat -140px -81px;}
+.reg_tips{ background:#fefdd5; border:#fcbeab solid 1px; padding:15px; margin:20px 100px 10px; line-height:20px;}
+.wx_login{float:left;border:#ececec solid 2px; background:#fefced; width:325px;margin:20px 0;height:403px;}
+.wx_login h1{ height:40px; line-height:40px; font-size:16px; background:url(loginbg.png) repeat-x 0 -304px; text-align:center; color:#fff; position:relative; top:-2px; left:-2px; width:329px;}
+.wx_login table{ margin:20px 0;}
+.wx_login td{color:#4d5352; padding:2px 3px; vertical-align:top; line-height:25px;}
+.wx_login .right{ text-align:right;}
+.wx_login input,.wx_login img{ vertical-align:middle;}
+.wx_login input[type="radio"]{margin:4px;}
+.wx_login .n_input{width:60px; height:22px;}
+.reg_link{margin-top:20px;float:right;width:180px; height:270px; padding:160px 220px 0 215px; background:url(loginbg2.png) no-repeat 0 0; text-align:center; color:#525252; font-weight:700; line-height:35px;}
+.reg_link a{ color:#656464;font-weight:200;font-size:14px;}
+.reg_link a:hover{ text-decoration:none;color:#ed7c00;}
+
+/*页脚*/
+.other_page{overflow:hidden;border-radius:3px; border-top:#eee solid 3px;}
+.footer_menu{height:120px;float:left;padding:15px 17px 10px 37px;width:110px;}
+.footer_menu .last{background:none}
+.footer_menu dt{color:#5f5e5e;font-size:14px;font-weight:bold;font-family:"微软雅黑";padding:5px 0 0}
+.footer_menu dd{padding:5px 0 0}
+.footer_menu a{color:#666}
+.footer_menu a:hover{color:#ed7c00;}
+.search_footer{text-align:center;padding-top:10px;color:#7f7f7f}
+.search_footer a{padding:5px;font-size:14px;color:#0100ce;text-decoration:underline}
+.search_footer a:hover{text-decoration:none}
+.other_page .search_footer a{font-size:12px;color:#606060;text-decoration:none}
+.other_page .search_footer a:hover{color:#ed7c00;}
+.other_page .search_footer a:hover{text-decoration:underline}
+.com_info{padding:10px 0;text-align:center}
+.com_info img{vertical-align:middle;margin:0 5px;width:106px;height:39px;}
+.copyright{text-align:center;line-height:20px;color:#7f7f7f;padding-top:10px;}
+div.other{border-top: 1px solid #CCCCCC;margin: 4px 30px;}
+div.other ul{clear:both;list-style: none outside none;padding:0px;}
+div.other li{float:left;padding: 0 5px 0 8px;}
+div.other li a{display: block;line-height: 20px;}
+div.other li s{background-image: url("/css/images/icon_cooperation.jpg");display:inline-block;height:20px;width:20px;}
+div.other li.alipay s{background-position:-28px 2px;}
+div.other li.weibo s{background-position:-120px 2px;}
+div.other li.douban s{background-position: -160px 2px;}

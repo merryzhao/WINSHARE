@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background:#fdf1e3; margin:0; padding:0; font-family:"STKaiti"; font-size:14px; color:#555;line-height:24px;}
+input { color:#555; font-family:"STKaiti"}
+/*h2 { height:30px; line-height:30px; text-indent:20px; font-size:15px; background:url( h1.png) top left no-repeat; color:#fff; font-weight:bold; padding-bottom:15px; margin:5px 0 0 0;}*/
+h2 { height:30px; line-height:30px; text-indent:20px; font-size:15px; display: inline-block;background: #CB1C30; color:#fff; font-weight:bold; padding-right:15px; margin:5px 0 0 0;}
+h3 { height:30px; line-height:30px; text-indent:20px; font-size:15px; display: inline-block;background: #C1EB80; color:#fff; font-weight:bold; padding-right:15px; margin:5px 0 0 0;}
+h4 { color:#1a66b3;  font-size:14px; margin:0;}
+
+.survey{margin:0 auto;width:962px;background:url( content_bg.png) center repeat-y;border-top:1px solid #d8d8d8;margin-top:10px;}
+ol.content ,.top ,.footer { margin:0 auto;}
+.content_bottom { background:url( content_bottom.jpg) bottom no-repeat; height:15px;}
+.top{position: relative;}
+.logo_box{height: 50px;width: 190px;float: left;margin-top: 10px;margin-left: 5px;}
+.survey_title{padding: 10px 4px 0 6px;font-size: 35px;color: #ED7C00;line-height: 40px;}
+.description {background: #FEFBF7;padding: 15px;color: #ED7C00;margin: 25px 20px 0;border: 1px solid #F0ECE8;border-radius: 4px;line-height: 24px;}
+ol.content {padding: 18px;list-style: none; }
+.footer { padding:15px 0; color:#a69178; text-align:center; font-size:12px;}
+
+.Q { border-top:1px solid #f6f4f4; margin:0; padding:10px 20px;}
+
+.Q ul,.Q ul,.Q ul li,.Q ul li label { padding:0; margin:0; list-style:none;}
+.Q ul li.text { padding-left:20px; background:url( pen.png) 0 4px no-repeat;}
+.Q ul li.text textarea { display:block; border:1px solid #d8d8d8; border-radius:4px; color:#555; font-family:"STKaiti"; width:450px; height:40px;}
+.four li { width:24%; }
+.ten li { width:9%; }
+.Q_radio {}
+.Q_radio li { display:inline-block;}
+.Q_checkbox {}
+.input_text { width:250px; border:none; max-width:200px; border-bottom:1px solid #d8d8d8; }
+
+.info {}
+.info li span { margin:5px 0; width:80px; display:inline-block; text-align:right;}
+.input_info { height:22px; line-height:22px; background:url( inputtext_bg.jpg) repeat-x top; border:1px solid #d8d8d8; border-radius:4px;}
+
+.submit {border: 1px solid #F6F4F4;text-shadow: 1px 2px #610D19;width: 122px;height: 32px;text-align: center;cursor: pointer;font-weight: bold;background: url(input_submit.png) no-repeat;line-height: 30px;color: white;margin:15px 0}
+
+.part_toolbar{padding-top: 16px;text-align: center;height: 30px;min-width: 1024px;}
+.part_toolbar button{background-image: url(buttons_bg.gif);background-repeat: repeat-x;border: 1px solid #CFCFCF;height: 24px;margin: 0px;padding-top: 3px;padding-bottom: 3px;cursor: pointer;margin: 0 2px;}
+.part_toolbar button img{margin: -3px 5px -3px 0;padding: 0px;border: 0px;}
+.float_buttons{position: absolute;top: 5px;right: 5px;}
+.float_buttons button,.control button{background-image: url(buttons_bg.gif);background-repeat: repeat-x;border-right: 1px solid #8E8E8E;border-bottom: 1px solid #8E8E8E;border-left: 0px;border-top: 0px;height: 24px;margin: 0px;padding-top: 3px;padding-bottom: 3px;cursor: pointer;margin: 0 2px;}
+.part{position: relative;}
+.control button{margin-top:10px;}
+button.moveup{background: url(up.gif) no-repeat 0 0;width: 15px;height: 15px;padding: 0px;border: 0px;}
+button.movedown{background: url(down.gif) no-repeat 0 0;width: 15px;height: 15px;padding: 0px;border: 0px;}
+button.insert{background: url(add.gif) no-repeat 0 0;width: 15px;height: 15px;padding: 0px;border: 0px;}
+button.remove{background: url(del.gif) no-repeat 0 0;width: 15px;height: 15px;padding: 0px;border: 0px;}
+.select_option{padding: 5px;font-size: 15px;font-weight: normal;color: black;width: 100%;}
+.select_option button{padding:0 10px;}
+.text_limit{padding-left:5px;}
+.main{width: 600px;margin: 0 auto;padding: 10px;background: white;border: 5px solid gainsboro;border-radius: 8px;margin-top:100px;}
+.success {color: #FF6C00;font-size: 20px;text-align: center;}
+.surveytitle {text-align: center;font-size: 20px;}

@@ -1,0 +1,12 @@
+visitedList
+visitedList\[\d+\]
+visitedList\[\d+\]\.sellName
+visitedList\[\d+\]\.url
+visitedList\[\d+\]\.imageUrl
+visitedList\[\d+\]\.product
+visitedList\[\d+\]\.product.imageUrlFor200px
+visitedList\[\d+\]\.salePrice
+visitedList\[\d+\]\.promValue
+visitedList\[\d+\]\.subheading
+visitedList\[\d+\]\.storageType
+visitedList\[\d+\]\.storageType.id

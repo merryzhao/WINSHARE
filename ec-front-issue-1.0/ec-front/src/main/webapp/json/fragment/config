@@ -1,0 +1,10 @@
+configlist
+configlist\[\d+\]
+configlist\[\d+\]\.fragment
+configlist\[\d+\]\.fragment\.id
+configlist\[\d+\]\.id
+configlist\[\d+\]\.name
+configlist\[\d+\]\.key
+configlist\[\d+\]\.value
+configlist\[\d+\]\.valueType
+configlist\[\d+\]\.description

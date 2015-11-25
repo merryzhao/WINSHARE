@@ -1,0 +1,17 @@
+[{
+	"mobile": [
+        "android",
+        "ios",
+        "iphone",
+        "ipod",
+        "ipad",
+        "windows phone",
+        "mqqbrowser"
+    ]},{
+    "exceptUrl": [
+        "/order/onlinepay/unionpaymobile/notify",
+        "/fragment/52",
+        "/fragment/41",
+        "/fragment/42"
+    ]
+}]

@@ -1,0 +1,10 @@
+list
+list\[\d+\]
+list\[\d+\]\.product
+list\[\d+\]\.product\.name
+list\[\d+\]\.url
+list\[\d+\]\.effectiveName
+list\[\d+\]\.imageUrl
+list\[\d+\]\.effectivePrice
+list\[\d+\]\.listPrice
+list\[\d+\]\.author

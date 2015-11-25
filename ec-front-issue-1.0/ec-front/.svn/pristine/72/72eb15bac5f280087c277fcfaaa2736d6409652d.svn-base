@@ -1,0 +1,12 @@
+result
+payment
+payment\[\d+\]
+payment\[\d+\]\.id
+payment\[\d+\]\.name
+payment\[\d+\]\.description
+payment\[\d+\]\.logo
+payment\[\d+\]\.available
+payment\[\d+\]\.sort
+useAccount
+balance
+isFilter

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        <title>分类测试</title>
+        <script src="http://static.winxuancdn.com/libs/core.js"></script>
+		<style>
+			body{font-size:12px;}
+			div,ul,li{padding:0;margin:0;}
+		</style>
+    </head>
+    <body>
+    	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<ul id="list">
+			<li><input type="checkbox" name="product" checked="checked" data-id="10646287"/>商品:10646287</li>
+			<li><input type="checkbox" name="product" checked="checked" data-id="10002359"/>商品:10002359</li>
+		</ul>
+	    <div class="test">
+		    <p style="float:right">
+		    	<input class="goods_num" type="text" size="3" value="1"/>
+			    <button bind="addToCart" data-id="10646287">购买</button>
+			    <button bind="addToFavorite" data-id="10646287">收藏</button>
+				<button bind="arrivalNotify" data-id="10646287">到货通知</button>
+				<button bind="pricecutNotify" data-id="10646287">降价通知</button>
+				<button bind="presell" data-id="10646287" data-date="2011年12月20日" data-region="成都">预售</button>
+				<button bind="batchFavorite" data-items="#list input[name='product']">批量收藏</button>
+				<button bind="batchAddToCart" data-items="#list input[name='product']:checked">批量购买</button>
+			</p>
+	    </div>
+		
+		<script>
+			// data-id 为productSaleID
+			// data-date 预售发货日期
+			// 默认绑定
+			seajs.use(["jQuery","toolkit"],function($,ToolKit){new ToolKit();});
+			
+			// 自定义绑定
+			/*
+				seajs.use(["jQuery","toolkit"],function($,ToolKit){new ToolKit({
+					button:{
+						addToCart:"[bind='addToCart']",
+						addToFavorite:"[bind='addToFavorite']",
+						arrivalNotify:"[bind='arrivalNotify']",
+						pricecutNotify:"[bind='pricecutNotify']",
+						presell:"[bind='presell']"
+					},
+					context:$("div.test")              // 指定上下文, 默认为document 在Ajax或者DHTML时使用
+				});});
+			*/
+			
+		</script>
+    </body>
+</html>

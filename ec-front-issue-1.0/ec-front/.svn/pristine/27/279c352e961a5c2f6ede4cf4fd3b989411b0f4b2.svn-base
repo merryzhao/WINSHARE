@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"
+	default-autowire="byName">
+
+	<context:component-scan base-package="com.winxuan.ec.front.controller,com.winxuan.ec.controller" />
+	 <bean id="config" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+			<property name="locations">
+				<list>
+					<value>classpath:conf/config.properties</value>
+					<!-- <value>classpath:cache.properties</value>  -->
+				</list>
+			</property>
+		</bean>
+	
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="webBindingInitializer">
+			<bean
+				class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+				<property name="validator" ref="validator" />
+			</bean>
+		</property>
+		<property name="customArgumentResolvers">
+			<list>
+				<bean class="com.winxuan.ec.support.web.resolver.DateResolver" />
+				<bean class="com.winxuan.ec.support.web.resolver.PaginationResolver" />
+				<bean class="com.winxuan.ec.support.web.resolver.ShoppingcartResolver" />
+				<bean class="com.winxuan.ec.support.web.resolver.TrackResolver" />
+				<bean class="com.winxuan.ec.support.web.resolver.UserResolver" />
+			</list>
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>ValidationMessages</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="ignoreAcceptHeader" value="true" />
+		<property name="defaultContentType" value="text/html" />
+		<property name="mediaTypes">
+			<map>
+				<entry key="json" value="application/json" />
+				<entry key="jsonp" value="application/javascript" />
+				<entry key="xml" value="application/xml" />
+				<entry key="xls" value="application/vnd.ms-excel" />
+			</map>
+		</property>
+		<property name="favorParameter" value="true" />
+		<property name="viewResolvers">
+			<list>
+				<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+				<bean
+					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+					<property name="viewClass"
+						value="org.springframework.web.servlet.view.JstlView" />
+					<property name="prefix" value="/page/" />
+					<property name="suffix" value=".jsp"></property>
+				</bean>
+				<bean class="com.winxuan.framework.springmvc.view.json.JsonViewResolver">
+					<property name="prefix" value="/json/" />
+					<property name="cache" value="false" />
+				</bean>
+				<bean class="com.winxuan.framework.springmvc.view.json.JsonpViewResolver">
+					<property name="prefix" value="/json/" />
+					<property name="cache" value="false" />
+				</bean>
+				<bean class="com.winxuan.framework.springmvc.view.excel.ExcelViewResolver">
+					<property name="prefix" value="/excel/" />
+					<property name="suffix" value=".xls"/>
+					<property name="cache" value="false" />
+				</bean>
+			</list> 
+		</property>
+	</bean>
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="cms/*">cmsSupportController</prop>
+				<prop key="cms/*/*">cmsSupportController</prop>
+				<prop key="cms/*/*/*">cmsSupportController</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="cmsSupportController" class="com.winxuan.cms.support.controller.SupportController">
+		<property name="context" value="cms" />
+		<property name="toSite" value="winxuanhome" />
+	</bean>
+
+</beans>

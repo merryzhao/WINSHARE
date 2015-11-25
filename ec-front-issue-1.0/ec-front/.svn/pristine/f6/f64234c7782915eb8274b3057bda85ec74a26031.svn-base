@@ -1,0 +1,42 @@
+#check_pass_set{width:520px;border-radius:5px;background:#838383;padding:3px;text-align:left;position:absolute;z-index:1001;box-shadow: 3px 3px 10px #464646;-webkit-box-shadow:3px 3px 10px #464646;-moz-box-shadow:3px 10px #464646;}
+#check_pass_set .wrap{background:#fff;padding:15px;position:relative;overflow:visible;border:1px solid #ccc;}
+#check_pass_set .close{position:absolute;top:-2px;right:-2px;_right:0;height:30px;width:30px; margin: 0; background: none;}
+#check_pass_set .close a{display:block;height:30px;background:url(images/icons.png) no-repeat -134px -31px;text-indent:-999px;overflow:hidden;}
+#check_pass_set .close a:hover{background:url(images/icons.png) no-repeat -169px -31px;}
+#check_pass_set h4{background:#fff;height: 30px; line-height: 30px; border-bottom:1px solid #c2c2c2; font-size: 14px; }
+#check_pass_set .set_step{padding: 25px;}
+#check_pass_set .set_step p{line-height: 18px;}
+#check_pass_set .set_step label{width: 100px; display: block;float: left; line-height: 25px; text-align: right; position:relative;}
+#check_pass_set .curr_step{width: 440px;height: 35px; background: url(images/step.png?20130106) no-repeat;}
+#check_pass_set .check_mobile .curr_step{background-position:0 -5px;}
+#check_pass_set span.tips{ padding: 0 5px; color: gray;}
+#check_pass_set .set_step input{font-size:12px/1.5em;font-weight:bolder;outline:none;width:180px;margin:0 5px;color:#333;border:1px solid #ccc;padding:4px;border-radius: 3px;box-shadow:1px 1px 1px #f2f2f2 inset;}
+#check_pass_set .set_step .code{width:60px; display: none;}
+#check_pass_set .btn_field{margin-top: 20px; padding-left: 105px;}
+#check_pass_set .btn_field button{background:url(images/background-img.png?201211281612) no-repeat -764px 3px;height:35px;width:85px;border:none;color:#fff;text-shadow:2px 2px 2px #333;text-align:center;cursor:pointer;font-size:1.2em}
+#check_pass_set .btn_field button:hover{background:url(images/background-img.png?201211281612) no-repeat -764px -36px;}
+/**
+#check_pass_set .get_code{ cursor:pointer; display:inline-block;border:#e9e9e9 solid 1px;height:24px;line-height:24px;text-align:center; padding:0 8px; margin-left:5px;color:#656464; border: 1px solid #cdcdcd;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;-moz-box-shadow:0 1px 1px #ccc;-webkit-box-shadow:0 1px 1px #ccc;box-shadow:0 1px 1px #ccc;background: -webkit-gradient(linear, 0 0,0 100%, from(#f7f7f7), to(#ececec));background:-moz-linear-gradient(top, #f7f7f7,#ececec); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#f7f7f7,endColorstr=#ececec,grandientType=1);}
+#check_pass_set .get_code:hover{background: -webkit-gradient(linear, 0 0,0 100%, from(#fafafa), to(#efefef));background:-moz-linear-gradient(top, #fafafa,#efefef); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#fafafa,endColorstr=#efefef,grandientType=1);}
+**/
+#check_pass_set .tip{ visibility:hidden; font-size:12px; display:inline-block; margin:2px 0 2px 105px; padding: 0 5px; color: #fff; background: #B90101; border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;}
+#check_pass_set .hide{ display: none;}
+#check_pass_set .get_code{ padding: 3px;cursor: pointer;}
+#check_pass_set .pass_type .curr_step{background-position:0 -50px;}
+#check_pass_set .set_success .curr_step{background-position:0 -96px;}
+#check_pass_set .success_tip{ text-align: center;padding: 50px;}
+#check_pass_set .success_tip span{display: block;width:240px; margin:0 auto; height: 40px; line-height: 40px; text-indent: 40px; background: url(images/background-img.png?201211281612) no-repeat -808px -208px;}
+
+#check_pass_set .modify_tip{width:280px; margin:0 auto;}
+#check_pass_set a{color:#1a66b4;}
+
+#check_pass_set .lh{line-height:25px;}
+#check_pass_set input.new_password{color:#ddd; font-weight: normal;}
+#check_pass_set input.mobile{ width: 110px;}
+#check_pass_set .typefield{position: relative;}
+#check_pass_set .message{ position: absolute;top:-8px; width: 140px; color: gray;}
+#check_pass_set .check_mobile .message{right:60px;}
+#check_pass_set .check_email .message{right:-10px;}
+
+#check_pass_set .emailTips{ text-align: center; padding-top:2px; font-weight:bold;}
+#check_pass_set .check_email .curr_step{background-position:0 -5px;}

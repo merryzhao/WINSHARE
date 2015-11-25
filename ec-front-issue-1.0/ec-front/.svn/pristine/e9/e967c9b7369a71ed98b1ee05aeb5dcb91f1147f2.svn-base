@@ -1,0 +1,12 @@
+result
+channel
+presents
+presents\[\d+\]
+presents\[\d+\]\.id
+presents\[\d+\]\.value
+presents\[\d+\]\.endDate
+presents\[\d+\]\.batch
+presents\[\d+\]\.batch\.id
+presents\[\d+\]\.batch\.orderBaseAmount
+presents\[\d+\]\.batch\.productTypeName
+presents\[\d+\]\.batch\.ploy

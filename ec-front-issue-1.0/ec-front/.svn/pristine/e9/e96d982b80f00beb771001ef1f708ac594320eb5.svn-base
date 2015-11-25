@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>您访问的商品已经停用了-文轩网</title>
+<link href="http://static.winxuancdn.com/css2/images/checkout/checkout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="reg_header">
+    <div class="header"> <a href="http://www.winxuan.com" title="文轩网,新华书店">文轩网，新华书店</a> </div>
+</div>
+<div class="layout">
+    <div class="order_su pay_su">
+    <p><b>对不起！<br />
+      该商品已经停用！</b></p>
+        <p>您可以：<br />
+            1、<a href="http://www.winxuan.com/" class="link1">进入文轩网首页</a><br />
+            2、<a href="http://www.winxuan.com/help/contact.html" class="link1">联系客服</a><br />
+            3、<a href="javascript:window.close();" class="link1">关闭窗口</a><br />
+    </div>
+</div>
+<div class="footer">
+    <p class="copyright"><br/>
+        地址：四川省成都市金牛区蓉北商贸大道文轩路6号2楼 邮编：610081   联系客服：400 010 8008<br/>
+        Copyright (C) 四川文轩在线电子商务有限公司 2000-2011, All Rights Reserved </p>
+</div>
+</body>
+</html>

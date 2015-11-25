@@ -1,0 +1,24 @@
+div.save-label p{background:#E5FDE5 url(../images/icons8.png) no-repeat 3px -26px;}
+.trow .quantity a.increase{background:url(../images/icons8.png) no-repeat -23px 0;top:24px;left:86px;}
+.trow .quantity a.reduce{background:url(../images/icons8.png) no-repeat 0 0;top:24px;left:18px;}
+.tfoot .delete{background:url(../images/icons8.png) no-repeat -63px 4px;}
+.tfoot .favorite{background:url(../images/icons8.png) no-repeat -44px 4px;}
+.combo-tab li button{background:url(../images/icons8.png) no-repeat 0 -70px;}
+.combo-tab li button.hover{background:url(../images/icons8.png) no-repeat 0 -105px;}
+.count .fetch{background:url(../images/icons8.png) no-repeat -81px 4px;}
+.trow .quantity input{padding:4px 0;height:auto;}
+.cart-confirm .title a{background:url(../images/icons8.png) no-repeat -100px 0px;}
+.cart-confirm .title a:hover{background:url(../images/icons8.png) no-repeat -117px 0;}
+.shop label.new{background:url(../images/icons8.png) no-repeat -66px -30px;margin:-2px 0;}
+.combo-tab li button.disabled{background:url(../images/icons8.png) no-repeat 0 -140px;}
+.group .shop .prom-tag{background:url(../images/icons8.png) no-repeat -38px -26px;}
+.group .shop .prom-tag li.first{margin-left:12px;}
+#mini-signin .signin-panel .other li{background-image:url(../images/icons8.png);}
+body #mini-signin button{background:url(../images/icons8.png) no-repeat 0 -173px;}
+body #mini-signin button:hover{background:url(../images/icons8.png) no-repeat 0 -212px;}
+body #mini-signin .close a{background:url(../images/icons8.png) no-repeat -134px -31px;}
+body #mini-signin .close a:hover{background:url(../images/icons8.png) no-repeat -169px -31px;}
+body #mini-signin .tip{margin:-2px 120px -2px 100px;}
+.cart .atf-head,.cart .atf-balance{position:absolute;}
+.cart .atf-head{top:expression(eval(document.documentElement.scrollTop))}
+.cart .atf-balance{bottom:expression(eval(document.documentElement.scrollHeight-document.documentElement.clientHeight-document.documentElement.scrollTop))}

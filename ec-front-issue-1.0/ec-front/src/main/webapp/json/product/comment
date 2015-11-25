@@ -1,0 +1,16 @@
+result
+message
+productSale
+productSale\.avgStarScore
+productSale\.shareByFiveStar
+productSale\.shareByFourStar
+productSale\.shareByThreeStar
+productSale\.shareByTwoStar
+productSale\.shareByOneStar
+productSale\.rankCountByFiveStar
+productSale\.rankCountByFourStar
+productSale\.rankCountByThreeStar
+productSale\.rankCountByTwoStar
+productSale\.rankCountByOneStar
+productSale\.rankList
+productSale\.rankList\[\d+\]

@@ -1,0 +1,17 @@
+fragment
+fragment\.id
+fragment\.name
+fragment\.type
+fragment\.rule
+fragment\.available
+fragment\.quantity
+fragment\.category
+fragment\.category\.id
+fragment\.category\.name
+fragment\.description
+config
+contentList
+contentList\[\d+\]
+contentList\[\d+\]\.id
+contentList\[\d+\]\.title
+contentList\[\d+\]\.url

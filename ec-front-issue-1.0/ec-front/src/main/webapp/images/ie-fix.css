@@ -1,0 +1,4 @@
+body .check_orders .tip{display:inline;}
+.layout .atf-progress,.layout .atf-head,.layout .atf-next{position:absolute;}
+.layout .atf-progress,.layout .atf-head{top:expression(eval(document.documentElement.scrollTop))}
+.layout .atf-next{bottom:expression(eval(document.documentElement.scrollHeight-document.documentElement.clientHeight-document.documentElement.scrollTop))}

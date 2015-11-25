@@ -1,0 +1,6 @@
+﻿.us_articl .news_x{ line-height:25px;}
+.us_articl .friend {line-height:16px; background-color:#dddddd;}
+.us_articl .friend a{ color:#666;}
+.us_articl .friend td{background-color:#FFF;}
+
+

@@ -1,0 +1,5 @@
+result
+towns
+towns\[\d+\]
+towns\[\d+\].id
+towns\[\d+\].name

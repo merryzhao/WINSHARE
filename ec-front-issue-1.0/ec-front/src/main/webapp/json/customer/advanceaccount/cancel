@@ -1,0 +1,8 @@
+status
+cashApplyStatus
+cashApplyStatus\.id
+cashApplyStatus\.name
+account
+account\.balance
+account\.frozen
+account\.total 

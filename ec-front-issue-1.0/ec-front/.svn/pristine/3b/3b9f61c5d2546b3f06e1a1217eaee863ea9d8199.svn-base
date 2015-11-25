@@ -1,0 +1,226 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文轩网 购物车</title>
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="images/png_fix.css" />
+<![endif]-->
+<link href="images/general.css" rel="stylesheet" type="text/css">
+<script src="javascript/jquery1.5.1.js"></script>
+<script src="javascript/common.js"></script>
+<script src="javascript/public.js"></script>
+</head>
+
+<body>
+<div class="top_menu">
+    <div class="wid990">
+        <p class="fl">您好，欢迎来文轩网！</p>
+        <ul class="signin_up fl">
+            <li class="fl sign_in"><a href="javascript:;" title="">登录</a></li>
+            <li class="fl sign_up"><a href="javascript:;" title="">免费注册</a></li>
+        </ul>
+        <p class="fr red">服务电话 400-820-820</p>
+        <ul class="top_right_menu fr">
+            <li class="first"><a href="javascript:;" title="购物记录">购物记录</a></li>
+            <li><a href="javascript:;" title="我的订单">我的订单</a></li>
+            <li><a href="javascript:;" title="我的帐户">我的帐户</a></li>
+            <li><a href="javascript:;" title="企业团购">企业团购</a></li>
+            <li><a href="javascript:;" title="礼品卡">礼品卡</a></li>
+            <li><a href="javascript:;" title="帮助中心">帮助中心</a></li>
+        </ul>
+    </div>
+</div>
+<div class="header other_header">
+    <div class="logo_box"><a title="文轩网,新华书店" href="http://www.wenxuan.com/"><img src="images/logo.gif" alt="文轩网" width="188" height="46"></a></div>
+</div>
+<div class="layout">
+    <div class="shop_progress"> <span id="progress1"></span> </div>
+    <p class="promotions">文轩 购满29免运费</p>
+    <table class="cart_goods" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th width="45%" colspan="2">商品名称</th>
+                <th>积分</th>
+                <th>文轩价</th>
+                <th>优惠</th>
+                <th>数量</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="suppliers" colspan="7"><p>商家： 文轩</p></td>
+            </tr>
+            <tr>
+                <td><img src="goods/sml_10002845.jpg" alt="20几岁男人要懂点心理学大全集" width="80" class="fl"></td>
+                <td><p class="ac_goods_intro"><a href="javascript:;" title="20几岁男人要懂点心理学大全集">20几岁男人要懂点心理学大全集</a><br/>
+                        (随着心理学的逐步发展，人们逐渐认识到心理学的应用范围越来越广...)</p></td>
+                <td>0</td>
+                <td><b class="red fb">￥23.00</b><b class="black fb">（85折）</b></td>
+                <td>0</td>
+                <td><a href="javascript:;"><img src="images/reduce.gif" alt="reduce" width="11" height="11"></a>
+                    <input name="textfield" type="text" id="textfield" size="3">
+                    <a href="javascript:;"><img src="images/increase.gif" alt="increase" width="11" height="11"></a></td>
+                <td><a class="link2" href="javascript:;">移入收藏</a><br/>
+                    <a class="link2" href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td><img src="goods/sml_10002724.jpg" alt="20几岁男人要懂点心理学大全集" width="80" class="fl"></td>
+                <td><p class="ac_goods_intro"><a href="javascript:;" title="20几岁男人要懂点心理学大全集">20几岁男人要懂点心理学大全集</a><br/>
+                        (随着心理学的逐步发展，人们逐渐认识到心理学的应用范围越来越广...)</p></td>
+                <td>0</td>
+                <td><b class="red fb">￥23.00</b><b class="black fb">（85折）</b></td>
+                <td><span class="favorable">减￥5元</span></td>
+                <td><a href="javascript:;"><img src="images/reduce.gif" alt="reduce" width="11" height="11"></a>
+                    <input name="textfield" type="text" id="textfield" size="3">
+                    <a href="javascript:;"><img src="images/increase.gif" alt="increase" width="11" height="11"></a></td>
+                <td><a class="link2" href="javascript:;">移入收藏</a><br/>
+                    <a class="link2" href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td class="suppliers" colspan="7"><p>商家： 红孩子</p></td>
+            </tr>
+            <tr class="out_of_stock">
+                <td><img src="goods/sml_10002845.jpg" alt="20几岁男人要懂点心理学大全集" width="80" class="fl"></td>
+                <td><p class="ac_goods_intro"><a href="javascript:;" title="20几岁男人要懂点心理学大全集">20几岁男人要懂点心理学大全集</a><br/>
+                        (随着心理学的逐步发展，人们逐渐认识到心理学的应用范围越来越广...)</p></td>
+                <td colspan="5"><p class="sys_tips"><span></span><b class="f14 fb">系统提示：</b>此商品已下架，系统将自己将此商品移入到你的收藏中 <input name="" type="button" value="确认"></p></td>
+            </tr>
+            <tr>
+                <td><img src="goods/sml_10002850.jpg" alt="20几岁男人要懂点心理学大全集" width="80" class="fl"></td>
+                <td><p class="ac_goods_intro"><a href="javascript:;" title="20几岁男人要懂点心理学大全集">20几岁男人要懂点心理学大全集</a><br/>
+                        (随着心理学的逐步发展，人们逐渐认识到心理学的应用范围越来越广...)</p></td>
+                <td>0</td>
+                <td><b class="red fb">￥23.00</b><b class="black fb">（85折）</b></td>
+                <td><span class="favorable">减￥5元</span></td>
+                <td><a href="javascript:;"><img src="images/reduce.gif" alt="reduce" width="11" height="11"></a>
+                    <input name="textfield" type="text" id="textfield" size="3">
+                    <a href="javascript:;"><img src="images/increase.gif" alt="increase" width="11" height="11"></a></td>
+                <td><a class="link2" href="javascript:;">移入收藏</a><br/>
+                    <a class="link2" href="javascript:;">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="checkout"><p>商品价格总计：<b>￥230.00</b></p><p><a class="continue_Shopping" href="javascript:;"><< 继续购物</a><input class="checkout_but" name="" type="button" value="结&nbsp;&nbsp;算"></p></div>
+    <div id="favorate">
+    <h3 class="data_title"><a class="fr open_up" href="javascript:;"></a><a class="fr pack_up" href="javascript:;"></a>收藏的商品 <a href="javascript:;">你还没有登录?</a></h3>
+    <table width="100%" class="order_coll" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td><img src="goods/sml_10002845.jpg" alt="20几岁男人要懂点心理学大全集" width="80" class="fl"></td>
+                    <td><p class="ac_goods_intro"><a href="javascript:;" title="20几岁男人要懂点心理学大全集">20几岁男人要懂点心理学大全集</a><br/>(随着心理学的逐步发展，人们逐渐认识到心理学的应用范围越来越广...)</p></td>
+                    <td>RMB360</td>
+                    <td><a class="link2" href="javascript:;">放入购物车</a> <a class="link2" href="javascript:;">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="recommend wider_rec" id="recommend">
+        <h3><a class="fr open_up" href="javascript:;"></a><a class="fr pack_up" href="javascript:;"></a> <a class="expansion" href="javascript:;"></a><a class="narrow" href="javascript:;"></a> 精品推荐 </h3>        
+        <a id="arrow_pre" href="javascript:;"></a> <a id="arrow_next" href="javascript:;"></a>
+        <div class="recom_goods_box">
+            <ul id="recom_goods_scroll_ul">
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_1226030.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002725.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002850.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002742.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002724.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002742.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002724.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002742.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_1226030.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002742.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                 <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002724.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goods_picture"><a href="javascript:;" title="与仓央嘉措一起修行"><img alt="与仓央嘉措一起修行" src="goods/sml_10002742.jpg"></a></div>
+                    <strong><a href="javascript:;" title="与仓央嘉措一起修行">与仓央嘉措一起修行(强烈推荐)</a></strong> <span class="goods_price"><b class="red fb">￥23.00</b> <del>￥36.00</del></span>
+                    <div class="comment"><span class="fr">20条评论</span>
+                        <div class="comment_star"><span style="width:80%"></span></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="cart_page">
+        <p class="search_footer"> <a title="合作伙伴" href="javascript:;">合作伙伴</a> <a title="公司简介" href="javascript:;">公司简介</a> <a title="诚聘英才" href="javascript:;">诚聘英才</a> <a title="文轩网API" href="javascript:;">文轩网API</a> <a title="联盟合作" href="javascript:;">联盟合作</a> </p>
+    </div>
+    <p class="copyright">电子公告许可证编号：川邮局[2001]012号    川预审F42T-02PV-XF08-B2N0号<br/>
+        地址：四川省成都市金牛区蓉北商贸大道文轩路6号2楼 邮编：610081<br/>
+        Copyright (C) 四川文轩在线电子商务有限公司 2000-2011, All Rights Reserved </p>
+</div>
+<script type="text/javascript">
+var scroll_num =6;/*scrool滚动个数*/
+var favorate_display =false;/*是否显示收藏*/
+var recommend_display=false;/*是否显示推荐*/
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+define("http://static.winxuancdn.com/libs/widgets/tips.js",[],function(a){return function(a){a("a[bind=tips]").mouseover(function(b){var c=a(this).offset(),d=a(this).next(".tips");d.show(),d.offset({top:c.top,left:c.left-d.width()/2}),d.mouseleave(function(){d.hide()})})}});

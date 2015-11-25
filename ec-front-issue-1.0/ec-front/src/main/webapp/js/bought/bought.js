@@ -1,0 +1,139 @@
+seajs.use(["jQuery","jQueryUI","cart","ui"],function($,uiPlugin,cart,ui){
+	var $=$.sub();
+	uiPlugin($);
+	var messageMap={
+		"1":'商品已成功添加到购物车！购物车共有<span class="red fb">{count}</span>种商品，合计：<span class="red fb">￥{price}</span>',
+		"2":"您所选的商品不存在",
+		"3":"您所购买的商品库存数量不足，系统已将商品的最大库存数更新至您的购物车",
+		"4":"您所选的商品已下架",
+		"5":"错误的数量"
+	},
+	bought={
+		defOpt:{
+			pageSize:10,
+			action:"http://www.winxuan.com/customer/bought"
+		},
+		init:function(){
+			this.el=$("#orderBy");
+			this.product=$("#productName");
+			this.start=$("#startDate");
+			this.end=$("#endDate");
+			this.form=$("#boughtForm");
+			this.sort=$("#sort");
+			this.all=$("#all");
+			this.book=$("#book");
+			this.video=$("#video");
+			this.total=$("#total");
+			this.merchandise=$("#merchandise");
+			this.buyButton=$("a.buy_but");
+			this.arrNotice=$("a.arr_notice");
+			this.bind();
+		},
+		bind:function(){
+			this.arrNotice.click(function(){
+				bought.notice($(this));
+			});
+			this.el.change(function(){
+				var val=$(this).val();
+				bought.change(val);
+			});
+			this.form.submit(function(e){
+				if(!bought.validate(this)){
+					e.preventDefault();
+					e.stopPropagation();					
+				}
+			});
+			this.start.datepicker({regional:"zh-CN"});
+			this.end.datepicker({regional:"zh-CN"});
+			this.all.click(function(){
+				bought.click("");
+			});
+			this.book.click(function(){
+				bought.click(11001);
+			});
+			this.video.click(function(){
+				bought.click(11002);
+			});
+			this.merchandise.click(function(){
+				bought.click(11003);
+			});
+			this.buyButton.click(function(){
+				bought.buy($(this));
+			});
+			$(cart).bind(cart.UPDATE_EVENT,function(e,data){
+				if(data.status=="1"){
+					var message=messageMap["1"].replace("{count}",data.shoppingcart.count).replace("{price}",data.shoppingcart.salePrice);
+					bought.win.change("success",message);
+				}else{
+					bought.win.change("error",messageMap[data.status]);
+				}
+			});
+		},
+		buy:function(el){
+			if(!!this.win)this.win.close();
+			this.win=ui.tipWindow({
+					width:"300",
+					dock:$(el),
+					callback:function(){
+						try{
+							window.open("/shoppingcart","shoppingcart");
+							win.close();
+						}catch(e){}
+					}
+				});
+			cart.add(el.attr("productSaleId"));
+		},
+		change:function(value){
+			this.order(value);
+		},
+		click:function(value){
+			this.sorts(value);
+		},
+		showMessage:function(msg){
+			alert(msg);
+		},
+		validate:function(){
+			if(this.start.val() > this.end.val())
+			{
+				this.showMessage("开始时间不能大于结束时间!");
+				return false;
+			}
+			return true;
+		},
+		order:function(value){
+			try{
+				window.open(this.defOpt.action+"?total="+this.total.val()+"&productName="+this.product.val()+"&startDate="+this.start.val()+"&endDate="+this.end.val()+"&orderBy="+value+"&sort="+this.sort.val(),"_self");
+			}catch(e){
+				throw new Error(e.message);
+			}
+		},
+		sorts:function(value){
+			try{
+				window.open(this.defOpt.action+"?total="+this.total.val()+"&productName="+this.product.val()+"&startDate="+this.start.val()+"&endDate="+this.end.val()+"&orderBy="+$("#orderBy").val()+"&sort="+value,"_self");
+			}catch(e){
+				throw new Error(e.message);
+			}
+		},
+		notice:function(el){
+			$.ajax({
+				url:"http://www.winxuan.com/customer/notify/add?format=jsonp&p="+el.attr("productSaleId")+"&type=461003&callback=?",
+				async:false,
+				success:function(data){
+					if(data.status=="1" || data.status=="2"){
+						ui.confirm({
+							message:"到货会通知您",
+							buttons:{
+								ok:"确认"
+							}
+						});
+					}
+				},
+				error:function(xhr,status){
+					throw new Error(status);
+				},
+				dataType:"jsonp"
+			});
+		}
+	};
+	bought.init();
+});

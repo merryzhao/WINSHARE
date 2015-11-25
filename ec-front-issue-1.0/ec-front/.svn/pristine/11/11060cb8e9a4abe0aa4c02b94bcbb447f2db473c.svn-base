@@ -1,0 +1,25 @@
+.main-presell {width: 100%;}
+.main-presell .col-base-1 .title {border-top:0 none;border-left:0 none;border-right:0 none;background: none;color: #000;}
+.main-presell .col-base-1 .tab {height: 400px;padding: 0;border: 0 none;}
+.main-presell .col .tab-item {text-align: left;cursor:auto;}
+.main-presell .col-base-1 .tab-item {line-height:normal;margin-right: 0;background: none;}
+.main-presell .col-base-1 .current {border-top: 0 none;border-left: 0 none;}
+.main-presell .col-base-2 .cont {border: 0 none;background: none;}
+.main-presell .list-base-1 {margin-top: 0;}
+.main-presell .list-base-1 li {margin: 0;}
+.main-presell .col-base-1 .tab {border: 0 none;}
+.main-presell .col-base-1 .tab-item {width: auto;float: none;}
+.main-presell .col-base-1 .current {border-right: 0 none;}
+.main-presell .col-base-1 .attach {line-height: normal;text-align: left;}
+.main-presell .col-base-1 .cont {border: 0 none;}
+.main-presell .col-tab-4 .cont {border: 1px solid #000;border-top: 0 none;}
+.main-presell .col-tab-3 .tab-1 .tab-item {width: 199px;height: 242px;float: left;border-right: 1px solid #dcdcdb;border-bottom: 1px solid #dcdcdb}
+.main-presell .col-tab-3 .cont {border: 1px solid #dcdcdb;border-top: 0 none;}
+.main-presell .btn-buystrong:hover {color: #fff!important;}
+.main-presell .mod-more-presell .col .tab-item {text-align: center;}
+.main-presell .col-tab-4 .tab-1 .current {background-color:#f3f3f3; }
+.head .list {overflow: visible!important;}
+.mod-week-arrival .col .attach {height: 0!important;line-height: 0!important;font-size: 0;}
+.col-user-sc .title {height: auto!important;line-height: auto!important;border-bottom: 0 none;}
+.master-user-sc-pop .col-user-sc .list-base-1 li {padding: 0;background: none;border-bottom: 0 none;}
+.master-header .master-user-sc-pop .master-user-carttotal {height: auto!important}

@@ -1,0 +1,1 @@
+define("http://static.winxuancdn.com/libs/module/config.js",[],{portalServer:"http://www.winxuan.com",searchServer:"http://search.winxuan.com",passportServer:"http://passport.winxuan.com",consoleServer:"http://console.winxuan.com",imgServer:"http://static.winxuancdn.com"});

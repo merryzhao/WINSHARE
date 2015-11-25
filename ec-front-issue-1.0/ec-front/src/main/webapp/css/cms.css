@@ -1,0 +1,108 @@
+div.ui\3a float\3a tip{position:fixed;right:40px;top:40px;background:#ccc;border:1px solid #ccc;width:20px;padding:5px;text-align:center;}
+div.ui\3a banner\3a tip{position:fixed;right:20px;bottom:15px;background:#ccc;border:1px solid #ccc;width:auto;padding:5px;text-align:center;}
+div.ui\3a flushcache\3a tip{position:fixed;right:120px;bottom:15px;background:#ccc;border:1px solid #ccc;width:auto;padding:5px;text-align:center;}
+
+
+div.ui\3a standout{border:3px solid #A10219;position:absolute;z-index:20000;display:none;}
+div.ui\3a standout div.ui\3a content{background-color:rgba(0,0,0,0.2);padding:0;}
+div.ui\3a title{background:#9F0A1F;height:30px;line-height:30px;clear:both;color:#fff;text-indent:20px;}
+div.ui\3a title div{float:right;padding:0 10px;}
+div.ui\3a title label{font-weight:bolder;}
+div.ui\3a title a{padding:4px;color:#fff;}
+div.ui\3a title a:hover{background:#fff;color:#ccc;}
+div.widget\3a window{padding:10px;position:absolute;background-color:rgba(0,0,0,0.2);top:30px;left:60px;border-radius:5px;display:none;z-index:20001;}
+div.widget\3a title{background:#F08300;height:30px;line-height:30px;color:#fff;cursor:move;position:relative;}
+div.widget\3a title label{font-weight:bolder;margin:0 14px;}
+div.widget\3a title div{float:right;padding:0 10px;}
+div.widget\3a title form{float:right;margin:0;position:absolute;left:20px;top:1px;padding:0;}
+div.widget\3a title input{width:200px;border:1px solid #ccc;padding:3px;}
+div.widget\3a title button{height:24px;line-height:24px;width:60px;border:1px solid #f8f8f8;background:#ccc;margin:0 4px;}
+div.widget\3a title a{padding:4px;color:#fff;}
+div.widget\3a title a:hover{background:#fff;color:#ccc;}
+div.widget\3a wrap{background:#fff;border:2px solid #E55506;position:relative;}
+div.widget\3a overlay{background:rgba(0,0,0,0.5);position:absolute;top:0;left:0;}
+div.widget\3a overlay p{position:absolute;top:50%;left:50%;width:200px;height:40px;margin:-20px -100px;background:url(images/loading.gif) no-repeat 4px 4px;line-height:40px;color:#fff;text-indent:40px;}
+div.widget\3a content p.pre-loading{height:200px;width:300px;text-align:center;background:url(images/loading.gif) no-repeat center;text-indent:-999999px;overflow:hidden;}
+
+div.ed\3a product{width:680px;height:530px;font-size:12px;}
+div.ed\3a product .dataList{padding:5px;clear:both;}
+div.ed\3a product .column{width:320px;height:420px;float:left;position:relative;margin:7px;}
+div.ed\3a product table{border-collapse:collapse;border-spacing:0;width:100%;}
+div.ed\3a product caption{font-weight:bolder;text-align:left;height:24px;line-height:24px;padding:0 4px;margin:0;}
+div.ed\3a product tr{border-bottom: 1px solid #ccc;}
+div.ed\3a product td{padding:5px 0;}
+div.ed\3a product .img{width:50px;vertical-align: top;}
+div.ed\3a product .img img{height:50px;width:50px;border:none;}
+div.ed\3a product .detail{width:220px;vertical-align:top;clear:both;}
+div.ed\3a product .detail .title{height:36px;line-height:18px;overflow:hidden;}
+div.ed\3a product .detail span{display:inline-block;line-height:16px;overflow:hidden;height:16px;}
+div.ed\3a product .detail .dateTime{width:64px;float:right;}
+div.ed\3a product .other{vertical-align: top;text-align:center;}
+div.ed\3a product td ul,div.ed\3a product td li{padding:0;margin:0;list-style:none;}
+div.ed\3a product td ul{padding:0 5px;}
+div.ed\3a product .bottom-action,div.ed\3a product .top-action{clear:both;position:absolute;}
+div.ed\3a product .bottom-action{bottom:20px;righ:0;}
+div.ed\3a product .top-action{top:0;right:5px;}
+div.ed\3a product .pages{padding:0;margin:0 4px;clear:both;float:right;}
+div.ed\3a product .pages li{float:left;}
+div.ed\3a product .button{text-align:center;}
+
+div.ed\3a menu{position:relative;height:50px;font-size:12px;background:#F2F2F2}
+div.ed\3a menu .left,div.ed\3a menu .right{position:absolute;top:13px;line-height:24px;}
+div.ed\3a menu .left{width:250px;left:15px;}
+div.ed\3a menu .right{width:380px;right:40px;overflow:hidden;}
+div.ed\3a menu ul,div.ed\3a menu li{list-style:none;padding:0;margin:0;}
+div.ed\3a menu ul{clear:both;width:1140px;}
+div.ed\3a menu li.item{float:left;width:380px;}
+div.ed\3a menu a.lArrow{right:430px;background:url(images/leftArrow.png) no-repeat center;}
+div.ed\3a menu a.rArrow{right:10px;background:url(images/rightArrow.png) no-repeat center;}
+div.ed\3a menu a.rArrow,div.ed\3a menu a.lArrow{top:14px;position:absolute;text-decoration: none;display:block;height:22px;width:12px;overflow:hidden;text-indent:-999px;}
+div.ed\3a menu input{border:1px solid #ccc;width:280px;margin:0 10px;padding:4px;}
+div.ed\3a menu button{border:1px solid #ccc;background:#ccc;padding:4px 10px;margin:0 4px;line-height:normal;}
+/*
+div.ed\3a menu button{border:1px solid #ccc;background:#ccc;height:24px;display:inline-block;line-height:22px;width:40px;padding:0;margin:0;font-size:12px;}
+*/
+div.ed\3a menu li.category {position: relative;background: #f2f2f2;width: 380px;font-size: 12px;overflow:visible;height:auto;}
+div.ed\3a menu li.category input{width: 200px;border: 1px solid #ccc;padding: 4px;}
+div.ed\3a menu li.category span.down-arrow{background: url(images/purple-down-arrow.gif) no-repeat center;display: block;height: 10px;width: 10px;position: absolute;top: 6px;right: 150px;cursor: pointer;}
+div.widget\3a wrap .treeList {position: absolute;display: none;z-index:20002;left:294px;top:65px;border:1px solid #ccc;background:#fff;padding:4px;overflow:auto;}
+div.widget\3a wrap .treeList li label{display:block;cursor:pointer;}
+div.widget\3a wrap .treeList li label.hover{background:#f2f2f2;}
+div.widget\3a wrap .treeList li ul{padding-left:10px;}
+div.widget\3a wrap .treeList li.packup ul{display:none;}
+
+div.ed\3a link{padding:5px;font-size:12px;width:660px;}
+div.ed\3a link table{border-collapse: collapse;border:1px solid #ccc;border-spacing:0;width:100%;}
+div.ed\3a link th{background:#F2F2F2;text-align:center;border:1px solid #ccc;}
+div.ed\3a link td{height:24px;line-height:24px;overflow:hidden;}
+div.ed\3a link tr{background:#FBFBFB;}
+div.ed\3a link .even{background:#fff;}
+div.ed\3a link .hover{background:#F2F2F2;}
+div.ed\3a link caption{font-weight: bolder;text-align:left;}
+div.ed\3a link caption,div.ed\3a link th{height:30px;line-height:30px;}
+div.ed\3a link .name{width: 108px;}
+div.ed\3a link .name,div.ed\3a link .title,div.ed\3a link .image,div.ed\3a link .href{overflow:hidden;word-break:keep-all;word-wrap:normal;height:24px;}
+div.ed\3a link .title{width: 108px;}
+div.ed\3a link .image{width: 108px;}
+div.ed\3a link .href{width: 108px;}
+div.ed\3a link .desc{width: 110px;}
+div.ed\3a link .action{width: auto;text-align:center;}
+div.ed\3a link .delete,div.ed\3a link .edit,div.ed\3a link .topmost{margin:0 4px;}
+div.ed\3a link .nocontent{height:80px;line-height:80px;text-align:center;}
+div.ed\3a link form{margin:10px 0;}
+div.ed\3a link fieldset{margin:0;padding:20px 5px;background:#F9F9F9;position:relative;}
+div.ed\3a link fieldset a{display:block;position:absolute;top:20px;right:30px;}
+div.ed\3a link legend{font-weight:bolder;}
+div.ed\3a link fieldset p{margin:0;height:30px;line-height:30px;clear:both;}
+div.ed\3a link fieldset label{display:block;width:100px;float:left;text-align:right;}
+div.ed\3a link fieldset input{border:1px solid #ccc;padding:4px;margin:0 10px;}
+div.ed\3a link fieldset .short{width:320px;}
+div.ed\3a link fieldset .long{width:475px;}
+div.ed\3a link fieldset div{text-align:right;margin:5px 0}
+div.ed\3a link fieldset button{margin:0 50px;width:60px;height:25px;}
+div.ed\3a link .button{text-align:center;}
+
+div.ed\3a text{padding:5px;}
+div.ed\3a text textarea{width:660px;height:330px;}
+div.ed\3a text .button{text-align:center;margin:10px;}
+

@@ -1,0 +1,6 @@
+result
+presentCards
+presentCards\[\d+\]
+presentCards\[\d+\]\.id
+presentCards\[\d+\]\.balance
+presentCards\[\d+\]\.endDate

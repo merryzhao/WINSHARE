@@ -1,0 +1,15 @@
+result
+deliveryInfo
+deliveryInfo\[\d+\]
+deliveryInfo\[\d+\]\.id
+deliveryInfo\[\d+\]\.deliveryType
+deliveryInfo\[\d+\]\.deliveryType\.id
+deliveryInfo\[\d+\]\.deliveryType\.name
+deliveryInfo\[\d+\]\.area
+deliveryInfo\[\d+\]\.area\.id
+deliveryInfo\[\d+\]\.area\.name
+deliveryInfo\[\d+\]\.area\.supportCod
+deliveryInfo\[\d+\]\.deliveryFeeType
+deliveryInfo\[\d+\]\.deliveryFeeType\.name
+deliveryInfo\[\d+\]\.deliveryFeeRule
+deliveryInfo\[\d+\]\.description

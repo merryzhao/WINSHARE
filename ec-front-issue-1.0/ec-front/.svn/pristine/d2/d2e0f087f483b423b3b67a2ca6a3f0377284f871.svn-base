@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文轩网 购物车</title>
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="images/png_fix.css" />
+<![endif]-->
+<link href="images/general.css" rel="stylesheet" type="text/css">
+<script src="javascript/jquery1.5.1.js"></script>
+<script src="javascript/common.js"></script>
+<script src="javascript/public.js"></script>
+</head>
+
+<body>
+<div class="top_menu">
+    <div class="wid990">
+        <p class="fl">您好，欢迎来文轩网！</p>
+        <ul class="signin_up fl">
+            <li class="fl sign_in"><a href="javascript:;" title="">登录</a></li>
+            <li class="fl sign_up"><a href="javascript:;" title="">免费注册</a></li>
+        </ul>
+        <p class="fr red">服务电话 400-820-820</p>
+        <ul class="top_right_menu fr">
+            <li class="first"><a href="javascript:;" title="购物记录">购物记录</a></li>
+            <li><a href="javascript:;" title="我的订单">我的订单</a></li>
+            <li><a href="javascript:;" title="我的帐户">我的帐户</a></li>
+            <li><a href="javascript:;" title="企业团购">企业团购</a></li>
+            <li><a href="javascript:;" title="礼品卡">礼品卡</a></li>
+            <li><a href="javascript:;" title="帮助中心">帮助中心</a></li>
+        </ul>
+    </div>
+</div>
+<div class="header other_header">
+    <div class="logo_box"><a title="文轩网,新华书店" href="http://www.wenxuan.com/"><img src="images/logo.gif" alt="文轩网" width="188" height="46"></a></div>
+</div>
+<div class="layout">
+    <div class="shop_progress"><span id="progress2"></span> </div>
+    <div class="order_border">
+        <h4 class="info_title">收货人信息 <a href="javascript:;">[修改]</a></h4>
+        <p class="info_con"><b>收件人</b> 中国，四川，成都，高新区天府软件园，610000，13599999999</p>
+        <h4 class="info_title">送货方式 <a href="javascript:;">[修改]</a></h4>
+        <p class="info_con">普通快递送货上门，周一至周五送货</p>
+        <h4 class="info_title">付款方式 <a href="javascript:;">[修改]</a></h4>
+        <p class="info_con">网上支付<img src="images/gongshang.gif" width="117" height="42"></p>
+        <h4 class="info_title">商品清单</h4>
+        <p class="shippers"><a class="fr" href="javascript:;">[返回修改购物车]</a>发货商：文轩</p>
+        <table class="order_goods" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <th align="left">商品名称</th>
+        <th>现价</th>
+        <th>优惠</th>
+        <th>数量</th>
+        <th>小计</th>
+    </tr>
+    <tr>
+        <td><p class="txt_left">中国财富圈 (影响中国经济走向的富豪俱乐部背后的故事)</p></td>
+        <td>￥14.70 </td>
+        <td>减￥12.10 </td>
+        <td>2</td>
+        <td><b class="red fb">￥26.80</b></td>
+    </tr>
+</table>
+    <ul class="amount_info">
+      <li>商品金额总计:￥29.40</li>
+      <li>运费:￥0.00</li>
+      <li>礼品卡：￥0.00</li>
+      <li>礼券：￥0.00</li>
+      <li>暂存款：￥0.00</li>
+      <li class="hei10"></li>
+      <li class="black">您需支付:  <b class="red amount_no">￥31.80</b></li>
+      <li><input class="checkout_but" name="" type="button" value="提交订单"></li>
+      <li class="invoice"><p class="black fb"><span class="down_arrow"></span>索取发票</p><p class="black">发票抬头：<input name="" type="radio" id="geren" value=""> <label for="geren">个人</label> <input name="" type="radio" id="danwei" value="" checked> <label for="danwei">单位</label> <input class="company_name" name="" type="text" value="请填写单位名称"></p><p>注：商家可以开具的发票内容请根据商家经营范围选择</p></li>
+    </ul>
+    </div>  
+</div>
+<div class="footer">
+    <div class="cart_page">
+        <p class="search_footer"> <a title="合作伙伴" href="javascript:;">合作伙伴</a> <a title="公司简介" href="javascript:;">公司简介</a> <a title="诚聘英才" href="javascript:;">诚聘英才</a> <a title="文轩网API" href="javascript:;">文轩网API</a> <a title="联盟合作" href="javascript:;">联盟合作</a> </p>
+    </div>
+    <p class="copyright">电子公告许可证编号：川邮局[2001]012号    川预审F42T-02PV-XF08-B2N0号<br/>
+        地址：四川省成都市金牛区蓉北商贸大道文轩路6号2楼 邮编：610081<br/>
+        Copyright (C) 四川文轩在线电子商务有限公司 2000-2011, All Rights Reserved </p>
+</div>
+</body>
+</html>

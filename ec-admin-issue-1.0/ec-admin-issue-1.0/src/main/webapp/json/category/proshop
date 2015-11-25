@@ -1,0 +1,16 @@
+proshop
+proshop.id
+proshop.url
+proshop.name
+proshop.description
+proshop.template
+proshop.available
+proshop.categories
+proshop.categories\[\d+\]
+proshop.categories\[\d+\]\.id
+proshop.categories\[\d+\]\.name
+proshop.categories\[\d+\]\.alias
+proshop.categories\[\d+\]\.code
+
+
+

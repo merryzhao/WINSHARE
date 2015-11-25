@@ -1,0 +1,7 @@
+minStockList
+minStockList\[\d+\]
+minStockList\[\d+\].dc
+minStockList\[\d+\].dc.id
+minStockList\[\d+\].dc.name
+minStockList\[\d+\].dc.description
+minStockList\[\d+\].quantity

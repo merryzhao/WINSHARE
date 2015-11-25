@@ -1,0 +1,9 @@
+result
+message
+JSON
+JSON.id
+JSON.name
+JSON.available
+JSON.type
+JSON.type.id
+JSON.type.name

@@ -1,0 +1,59 @@
+
+LoginError.loginForm = \u7528\u6237\u540D\u6216\u8005\u5BC6\u7801\u9519\u8BEF!
+
+Max.productMetaForm.length = "length is too big",
+
+Min.orderInvoiceCreateForm.city     = "please select a city!",
+Min.orderInvoiceCreateForm.district = "please select a district!",
+Min.orderInvoiceCreateForm.province = "please select a province!",
+Min.orderInvoiceCreateForm.quantity = "quantity can't be a negative number!",
+Min.productMetaForm.length          = "length is too small",
+
+NotBlank.orderInvoiceCreateForm.address   = "address can't be blank!",
+NotBlank.orderInvoiceCreateForm.consignee = "consignee can't be blank!",
+NotBlank.orderInvoiceCreateForm.email     = "email can't be blank!",
+NotBlank.orderInvoiceCreateForm.title     = "title can't be blank!",
+NotBlank.paymentEditForm.name             = "name can't be blank!",
+NotBlank.presentCardModifyForm.id         = "id can't be blank",
+NotBlank.presentCardModifyForm.password   = "password can't be blank",
+
+NotEmpty.loginForm.name                   = \u7528\u6237\u540D\u5FC5\u987B\u8F93\u5165!
+NotEmpty.loginForm.password               = \u5BC6\u7801\u5FC5\u987B\u8F93\u5165\uFF01
+NotEmpty.orderInvoiceCreateForm.address   = "address can't be empty!",
+NotEmpty.orderInvoiceCreateForm.consignee = "consignee can't be empty!",
+NotEmpty.orderInvoiceCreateForm.email     = "email can't be empty!",
+NotEmpty.orderInvoiceCreateForm.title     = "title can't be empty!",
+NotEmpty.paymentEditForm.name             = "name can't be empty!",
+NotEmpty.presentCardModifyForm.id         = "id can't be empty",
+NotEmpty.presentCardModifyForm.password   = "password can't be empty",
+
+NotNull.orderInvoiceCreateForm.city     = "city can't be null!",
+NotNull.orderInvoiceCreateForm.country  = "country can't be null!",
+NotNull.orderInvoiceCreateForm.district = "district can't be null!",
+NotNull.orderInvoiceCreateForm.money    = "money can't be null!",
+NotNull.orderInvoiceCreateForm.province = "province can't be null!",
+NotNull.presentBatchForm.num            = "quantity can not be null",
+NotNull.productMetaForm.length          = "length can not be null",
+NotNull.productMetaForm.name            = "name can not be null",
+
+Size.loginForm.name     = \u7528\u6237\u540D\u957F\u5EA6\u4E3A3\u523016\u4F4D\u5B57\u7B26!
+Size.loginForm.password = \u5BC6\u7801\u957F\u5EA6\u4E3A5\u523016\u4F4D\u5B57\u7B26!
+
+create.createUserForm.email    = \u8BF7\u8F93\u5165\u7528\u6237\u7535\u5B50\u90AE\u7BB1
+create.createUserForm.name     = \u8BF7\u8F93\u5165\u7528\u6237\u8D26\u53F7
+create.createUserForm.password = \u8BF7\u8F93\u5165\u7528\u6237\u5BC6\u7801
+
+detail.userDetailForm.email    = \u8BF7\u8F93\u5165\u7535\u5B50\u90AE\u7BB1
+detail.userDetailForm.mobile   = \u8BF7\u8F93\u5165\u624B\u673A\u53F7\u7801
+detail.userDetailForm.phone    = \u8BF7\u8F93\u5165\u5EA7\u673A\u53F7\u7801
+detail.userDetailForm.realName = \u8BF7\u8F93\u5165\u771F\u5B9E\u59D3\u540D
+
+reset.resetUserForm.name     = \u8BF7\u8F93\u5165\u7528\u6237\u8D26\u53F7
+reset.resetUserForm.password = \u8BF7\u8F93\u5165\u7528\u6237\u5BC6\u7801
+
+resource.createResourceForm.code  = \u8BF7\u8F93\u5165\u8D44\u6E90\u7F16\u7801
+resource.createResourceForm.value = \u8BF7\u8F93\u5165\u8D44\u6E90\u503C
+
+update.modifyUserForm.confirmNewPassword = \u8BF7\u8F93\u5165\u7528\u6237\u786E\u8BA4\u65B0\u5BC6\u7801
+update.modifyUserForm.newPassword        = \u8BF7\u8F93\u5165\u7528\u6237\u65B0\u5BC6\u7801
+update.modifyUserForm.oldPassword        = \u8BF7\u8F93\u5165\u7528\u6237\u65E7\u5BC6\u7801

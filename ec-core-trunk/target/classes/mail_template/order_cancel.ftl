@@ -1,0 +1,1 @@
+Hi,${order.customer.displayName},您的订单${order.id}已取消。

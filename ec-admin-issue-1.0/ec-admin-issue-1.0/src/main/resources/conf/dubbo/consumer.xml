@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 远程调用dip  -->
+	<dubbo:reference id="wmsOrderBlockService" interface="com.winxuan.services.dip.service.WmsOrderBlockService" />
+	
+	<dubbo:reference id="wmsOrderService" interface="com.winxuan.services.dip.service.WmsOrderService" />
+	
+	<dubbo:reference id="pSService" interface=" com.winxuan.services.pcs.service.ProductSaleService" />
+	
+	<dubbo:reference id="stockService" interface="com.winxuan.services.pss.service.StockService" />
+
+</beans>

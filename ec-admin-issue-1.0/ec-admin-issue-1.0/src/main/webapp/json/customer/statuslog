@@ -1,0 +1,11 @@
+result
+logs
+logs\[\d+\]
+logs\[\d+\]\.id
+logs\[\d+\]\.user\.name
+logs\[\d+\]\.channel
+logs\[\d+\]\.channel\.name
+logs\[\d+\]\.discount
+logs\[\d+\]\.operator
+logs\[\d+\]\.operator\.name
+logs\[\d+\]\.updateTime

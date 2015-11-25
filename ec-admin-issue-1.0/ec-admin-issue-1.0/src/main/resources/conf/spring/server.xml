@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd"
+	default-autowire="byName">
+	
+<!-- 	<bean id="emailProcessService" class="com.winxuan.framework.jms.mail.EmailProcessServiceImpl"></bean> -->
+	<bean id="cookieIdentityValidator" class="com.winxuan.framework.validator.impl.CookieIdentityValidator" abstract="true"/>
+	<bean id="identityValidator" class="com.winxuan.framework.validator.impl.CookieIdentityValidatorImpl" parent="cookieIdentityValidator">
+		<property name="authenticationProvider" ref="employeeService"/>
+		<property name="visitorTarget" value="cv"/>
+		<property name="principalTarget" value="cp"/>
+	</bean>
+	<bean id="removeCacheService" class="com.winxuan.ec.service.removecache.RemoveCacheServiceImpl">
+		<property name="ignoreParams" value="true"/>
+		<property name="sortParams" value="false"/>
+		<property name="ignoreEmptyParams" value="false"/>
+	</bean>
+	<bean id="erpService"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://erp.service.winxuan.com/adapter/erpService</value>
+		</property>
+
+		<property name="serviceInterface">
+			<value>com.winxuan.erp.adapter.ErpService</value>
+		</property>
+	</bean>
+	<bean id="wmsService"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://erp.service.winxuan.com/adapter/wmsService</value>
+		</property>
+
+		<property name="serviceInterface">
+			<value>com.winxuan.erp.adapter.WmsService</value>
+		</property>
+	</bean>
+</beans>

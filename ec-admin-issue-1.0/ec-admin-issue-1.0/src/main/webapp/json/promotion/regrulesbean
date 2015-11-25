@@ -1,0 +1,11 @@
+result
+message
+registerRulesBean
+registerRulesBean.registerPresentBean
+registerRulesBean.registerPresentBean.presentNum
+registerRulesBean.registerPresentBean.presentBatch
+registerRulesBean.registerPresentBean.presentBatch.id
+registerRulesBean.registerPresentBean.presentBatch.batchTitle
+registerRulesBean.registerPresentBean.presentBatch.value
+registerRulesBean.registerPresentBean.presentBatch.productType
+registerRulesBean.registerPresentBean.presentBatch.orderBaseAmount

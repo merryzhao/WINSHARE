@@ -1,0 +1,49 @@
+#common
+#writeMysql.url=${writeMysql.url}
+#writeMysql.username=${writeMysql.username}
+#writeMysql.password=${writeMysql.password}
+#readMysql.url=${readMysql.url}
+#readMysql.username=${readMysql.username}
+#readMysql.password=${readMysql.password}
+
+#test \u6d4b\u8bd5\u8fde\u63a5
+#writeMysql.url=jdbc:mysql://10.1.2.16:33306/newshop
+#writeMysql.username=ectest
+#writeMysql.password=wxzx_mnbvcxz
+#
+#readMysql.url=jdbc:mysql://10.1.2.49:33307/newshop
+#readMysql.username=wxec49
+#readMysql.password=rfvrtyxhbs
+
+
+#dev \u5f00\u53d1\u8fde\u63a5
+#writeMysql.url=jdbc:mysql://10.1.2.7:33306/newshop
+#writeMysql.username=xhbsdev
+#writeMysql.password=poiuyt
+#readMysql.url=jdbc:mysql://10.1.2.7:33306/newshop
+#readMysql.username=xhbsdev
+#readMysql.password=poiuyt
+#console
+path.console=/export/console_files
+
+
+#hibernate/dev/test 
+#hibernate.show_sql =${hibernate.show_sql}
+#hibernate.cache.use_second_level_cache =${hibernate.cache.use_second_level_cache}
+complex_image_address=/export/product_images
+
+destination = ${destination}
+
+log.url=jdbc:mysql://10.1.2.7:33306/db_monitor
+log.username=wx_monitor
+log.password=123qwezxc
+
+#memcached servers
+#hibernate.memcached.servers=10.1.2.4:11211 10.1.2.4:11213                                                                                                                                                 
+#xmemcached.memcached.host1=10.1.2.4
+#xmemcached.memcached.port1=11211
+#xmemcached.memcached.host2=10.1.2.4
+#xmemcached.memcached.port2=11213
+#xmemcached.memcached.connectionPoolSize=1
+#kuaidi100
+core.logapiurl=http://api.kuaidi100.com

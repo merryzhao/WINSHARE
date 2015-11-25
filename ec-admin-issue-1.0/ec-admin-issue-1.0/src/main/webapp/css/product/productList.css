@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+input.codingContent {
+	margin-left: 50px;
+}
+
+input.sellerName {
+	margin-left: 5px;
+}
+
+input.productAuthor {
+	margin-left: 5px;
+}
+
+label.moretrem {
+	margin-left: 25px;
+	color: #5CACEE;
+}
+
+div.moreterm {
+	margin:10px 0 10px 0; 
+	display: none;
+}
+.error {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+textarea {
+	width: 200px;
+	height: 60px;
+	vertical-align:top;
+	margin-top:-2px;
+}
+table{
+	width:1180;
+}
+select{
+	margin:0em 0;
+}
+.predc{
+	margin-right:45px;
+}
+.preOnShell{
+	margin-right:34px;
+}
+.preDescr{
+	margin-right:36px;
+}

@@ -1,0 +1,224 @@
+/* 
+ * Sliding Tabs - jQuery Plugin
+ * Copyright 2011, Christian Andr茅
+ *
+ * CHANGING THE WIDTH: To change the width of the tabs layout see line 14, 87 and 135.
+ *
+------------------------------------------------------------------------------------- */
+
+div.st_horizontal { /* The main container */	
+	position:relative;	
+	z-index:1000;
+	float:left;
+	clear:both;
+	width:775px; /* STEP 1: Changing the tabs width - Set the full width of the tabs */
+	color:#616161;
+}
+
+/* Control buttons
+------------------------------------------------------------------------------------- */
+div.st_horizontal a.st_prev, 
+div.st_horizontal a.st_next { /* Directional buttons (previous/next) */
+	position:relative;	
+	z-index:110;
+	display:none;
+	float:left;
+	height:38px;
+	width:39px;
+	border:1px solid #d4d4d4;
+	outline:none;
+	background:#fff url(img/btn_arrows.gif) no-repeat;	
+}
+
+div.st_horizontal a.st_prev { /* Previous button */
+	border-right:0 none;	
+	background-position:13px 13px;
+	border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	-webkit-border-top-left-radius:4px;
+}
+
+div.st_horizontal a.st_prev:hover { /* Previous button hover */	
+	background-position:-50px 13px;
+	background-color:#f5f5f5;
+}
+
+div.st_horizontal a.st_next { /* Next button */
+	background-position:14px -14px;
+	border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	-webkit-border-top-right-radius:4px;
+}
+
+div.st_horizontal a.st_next:hover { /* Next button hover */	
+	background-position:-49px -14px;
+	background-color:#f5f5f5;
+}
+
+div.st_horizontal a.st_prev.st_btn_disabled, 
+div.st_horizontal a.st_next.st_btn_disabled { /* Previous and next buttons disabled state */
+	cursor:default;
+	background-color:#f7f7f7;
+}
+
+div.st_horizontal a.st_prev.st_btn_disabled { /* Previous button disabled state */
+	background-position:-113px 13px;
+}
+
+div.st_horizontal a.st_next.st_btn_disabled { /* Next button disabled state */
+	background-position:-112px -14px;
+}
+
+/* Tabs
+------------------------------------------------------------------------------------- */
+div.st_horizontal div.st_tabs_container { /* Tabs main container */
+	position:relative;
+	z-index:100;
+	float:left;
+	width:100%;
+	height:40px;
+	margin-bottom:-1px;
+	overflow:hidden;
+}
+
+div.st_horizontal div.st_slide_container { /* Tabs slide-container */
+	position:relative !important; /* The tabs position will be calculated from ul.tabs first parent element with position:relative */
+	float:left;
+	width:693px; /* STEP 2: Changing the tabs width - The full width (775px) -minus border-left (1px) and the arrow buttons full width (40px + 41px = 81px) */ 
+	border-left:1px solid #d4d4d4;
+}
+
+div.st_horizontal ul.st_tabs { /* Tabs unordered list */
+	width:10000px; /* Set to an arbitrary high value */
+	height:40px;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+div.st_horizontal ul.st_tabs li { /* Tab list elements */
+	float:left;
+}
+
+div.st_horizontal ul.st_tabs li a { /* Tab links */
+	display:block;
+	margin:0px;
+	padding:10px 20px;
+	font-size:11px;
+	line-height:18px; /* Aligns the tabs to the bottom of the content container */
+	color:#6a6a6a;
+	font-weight:bold;
+	text-decoration:none;
+	outline:none;
+	border-top:1px solid #d4d4d4;
+	border-right:1px solid #d4d4d4;
+	border-bottom:1px solid #d4d4d4;
+	background:#fff url(img/h_tab_bg.jpg) repeat-x 0px bottom;
+}
+
+div.st_horizontal ul.st_tabs a:hover { /* Tabs hover state */
+	color:#333;
+}
+
+div.st_horizontal ul.st_tabs a.st_tab_active { /* Tab active/highlighted state */
+	color:#1ca5ec;
+	border-bottom-color:#fff;
+	background:#fff;
+}
+
+/* Content
+------------------------------------------------------------------------------------- */
+div.st_horizontal div.st_view_container { /* Main content container */
+	position:relative;
+	z-index:5;
+	float:left;
+	width:733px; /* STEP 3 (final): Changing the tabs width - The full width (775px) -minus the padding (40px) and borders (2px) */
+	height:278px;
+	padding:20px; /* Set the padding for the content here */
+	border:1px solid #d4d4d4;
+	background-color:#fff;
+	overflow:hidden; /* To make the content scroll if Javascript is disabled, set to: auto */
+}
+
+div.st_horizontal div.st_view { /* Slide-container for the content */
+	position:relative;		
+	height:100%;
+}
+
+div.st_horizontal div.st_tab_view { /* Individual content containers */
+	width:100%;
+	margin-bottom:30px;
+	background-color:#fff;
+}
+
+div.st_horizontal div.st_view h2 {
+	font-size:16px;
+	color:#454545;
+	margin:0 0 16px;
+	padding:0px;
+}
+
+div.st_horizontal div.st_view p {
+	margin:14px 0 0;
+	padding:0px;
+}
+
+div.st_horizontal div.st_view blockquote {
+	float:left;
+	width:315px;
+	margin:18px 14px 0 0;
+	padding:0 0 0 14px;
+	border-left:2px solid #5c5c5c;
+	font:italic 17px/21px Georgia, "Times New Roman", Times, serif;
+	color:#A8A8A8;
+}
+
+div.st_horizontal div.st_view blockquote p {
+	margin:0px;
+}
+
+/* Bottom aligned tabs
+------------------------------------------------------------------------------------- */
+div.st_horizontal.align_bottom { /* The main container */	
+	padding-bottom:39px; /* Use the height of the tabs container -minus the top border (1px) */
+}
+
+div.st_horizontal.align_bottom a.st_prev, 
+div.st_horizontal.align_bottom a.st_next { /* Directional buttons (previous/next) */
+	border-bottom:1px solid #d4d4d4;
+}
+
+div.st_horizontal.align_bottom a.st_prev { /* Previous button */
+	border-right:0 none;
+	/* Reset top borders */
+	border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	/* Set bottom borders */
+	border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	-webkit-border-bottom-left-radius:4px;
+}
+
+div.st_horizontal.align_bottom a.st_next { /* Next button */
+	/* Reset top borders */
+	border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	/* Set bottom borders */
+	border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-right-radius:4px;
+}
+
+div.st_horizontal.align_bottom div.st_tabs_container { /* Tabs main container */
+	position:absolute; /* Absolute position the tabs container at the bottom of the main container */
+	bottom:0px;
+	left:0px;
+	margin-bottom:0px;
+}
+
+div.st_horizontal.align_bottom ul.st_tabs a.st_tab_active { /* Tab active/highlighted state */
+	border-top-color:#fff;
+	border-bottom-color:#d4d4d4;
+}

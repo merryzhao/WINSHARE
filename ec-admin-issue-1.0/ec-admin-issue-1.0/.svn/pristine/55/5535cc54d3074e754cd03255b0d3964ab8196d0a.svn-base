@@ -1,0 +1,13 @@
+result
+message
+presentCard
+presentCard.id
+presentCard.createDate
+presentCard.denomination
+presentCard.balance
+presentCard.endDate
+presentCard.expired
+presentCard.status
+presentCard.status.name
+presentCard.type
+presentCard.type.name

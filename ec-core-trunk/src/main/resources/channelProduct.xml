@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName">
+ 
+	
+	
+	<bean id="channelProductServiceTopic" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg value="${destination}" />
+	</bean>
+	
+	<bean id="channelProductService" class="com.winxuan.framework.util.jms.JmsInvokerProxyFactoryBean">
+		<property name="serviceInterface" value="com.winxuan.ec.service.product.ChannelProductService" />
+		<property name="connectionFactory" ref="connectionFactoryProductor" />
+		<property name="destination" ref="channelProductServiceTopic" />
+	</bean>
+	
+	<bean id="orderStatusServiceTopic" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg value="${order.status.destination}" />
+	</bean>
+
+	<bean id="orderStatusService" class="com.winxuan.framework.util.jms.JmsInvokerProxyFactoryBean">
+		<property name="serviceInterface" value="com.winxuan.ec.service.order.OrderStatusService" />
+		<property name="connectionFactory" ref="connectionFactoryProductor" />
+		<property name="destination" ref="orderStatusServiceTopic" />
+	</bean>
+	
+	<bean id="orderInitQueue" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="${order.init.destination}" />
+	</bean>
+
+	<bean id="orderStockService" class="com.winxuan.framework.util.jms.JmsInvokerProxyFactoryBean">
+		<property name="serviceInterface" value="com.winxuan.ec.service.order.OrderStockService" />
+		<property name="connectionFactory" ref="connectionFactoryProductor" />
+		<property name="destination" ref="orderInitQueue" />
+	</bean>
+	
+</beans>

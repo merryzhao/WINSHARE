@@ -1,0 +1,28 @@
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+html,body,.frame{height:100%;}body{font-size:12px;}div.frame-top{height:80px;}html,body{overflow:hidden;}
+.frame,.frame-top,.frame-side,.frame-content{position:relative;}
+
+.frame-top{border-bottom:2px solid #ccc;}
+.frame-top .logo{background:url(images/logo.gif) no-repeat 0 0;display:block;width:200px;margin:5px 10px;padding-top:53px;text-align:center;float:left;text-decoration:none;color:#808080;;}
+.frame-top ul{position:absolute;top:40px;left:400px;}
+.frame-top ul li{float:left;padding:0 20px;font-size:1.2em;font-weight:bolder;}
+.frame-top div.my-status{position:absolute;right:5px;top:5px;clear:both;}
+
+.frame-content{margin-left:200px;}
+.frame-content-inner{padding:5px;}
+.frame-side{position:absolute;top:80px;}
+.frame-side-inner{padding:5px;}
+.list-head{height:30px;line-height:30px;}
+.list-head h3{padding-left:10px}
+#side-accordion{width:190px;}
+
+.menu-list li{line-height:24px;padding-left:20px;}
+.tree-list{visibility:hidden;}
+.tree-view ul{padding-left:20px;}
+.tree-view div.tree-row{position:relative;height:24px;}
+.tree-view div.tree-col{position:absolute;line-height:24px;}
+.tree-view .channel-name{width:200px;}
+.tree-view .channel-type{right:300px;width:200px;text-align:center;}
+.tree-view .channel-createTime{right:200px;width:80px;text-align:center;}
+.tree-view div.channel-createTime{line-height:12px;}
+.tree-view .channel-operate{right:30px;}

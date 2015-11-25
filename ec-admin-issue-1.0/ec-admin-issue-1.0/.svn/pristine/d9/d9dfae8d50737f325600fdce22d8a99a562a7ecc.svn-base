@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName">
+
+	<bean id="queneDestination" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="wx.heartbeat" />
+	</bean>
+
+	<!-- 消息监听容器 -->
+	<bean id="topicListenerContainer"
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactoryConsumer" />
+		<property name="receiveTimeout" value="10000" />
+		<property name="destination" ref="queneDestination" />
+		<property name="messageListener">
+			<bean id="topicConsumer"
+				class="com.winxuan.ec.service.heartbeat.HeartBeatListenerServiceImpl" />
+		</property>
+	</bean>
+
+	<bean class="com.winxuan.heartbeat.HeartBeatConfigurer"
+		init-method="init">
+		<property name="beatConfig">
+			<bean class="com.winxuan.heartbeat.BeatConfig">
+				<property name="name" value="EC业务后台" />
+				<property name="key" value="console" />
+				<property name="jmsUrl" value="${core.jms.productor}" />
+				<property name="frequency" value="120000" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="heartBeatListener"
+		class="com.winxuan.ec.service.heartbeat.HeartBeatListenerServiceImpl">
+	</bean>
+	
+	<!-- 发送短消息-->
+	<bean id="heartBeatMonitor"
+		class="com.winxuan.ec.service.heartbeat.HeartBeatMonitorServiceImpl">
+	</bean>
+	
+</beans>  

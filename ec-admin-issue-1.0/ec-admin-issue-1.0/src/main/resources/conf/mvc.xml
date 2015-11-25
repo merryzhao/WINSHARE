@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName">
+<aop:aspectj-autoproxy/>
+	<context:component-scan base-package="com.winxuan.ec.admin.controller" />
+
+<bean id="config"
+		class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+	<property name="order" value="1" />
+		<property name="locations">
+			<list>
+				<value>classpath:conf/config.properties</value>
+			</list>
+		</property>
+		<property name="ignoreResourceNotFound" value="false" />
+		<property name="ignoreUnresolvablePlaceholders" value="true"></property>
+	</bean>
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="interceptors">
+			<list>
+				 <bean
+					class="com.winxuan.framework.springmvc.token.FormTokenInterceptor" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="webBindingInitializer">
+			<bean
+				class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+				<property name="validator" ref="validator" />
+			</bean>
+		</property>
+		<property name="customArgumentResolvers">
+			<list>
+				<bean class="com.winxuan.ec.support.web.resolver.UserResolver" />
+				<bean class="com.winxuan.ec.support.web.resolver.DateResolver" />
+				<bean class="com.winxuan.ec.support.web.resolver.PaginationResolver" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>ValidationMessages</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="ignoreAcceptHeader" value="true" />
+		<property name="defaultContentType" value="text/html" />
+		<property name="mediaTypes">
+			<map>
+				<entry key="json" value="application/json" />
+				<entry key="jsonp" value="application/javascript" />
+				<entry key="xml" value="application/xml" />
+				<entry key="xls" value="application/vnd.ms-excel" />
+				<entry key="csv" value="text/csv" />
+			</map>
+		</property>
+		<property name="favorParameter" value="true" />
+		<property name="viewResolvers">
+			<list>
+				<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+				<bean
+					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+					<property name="viewClass"
+						value="org.springframework.web.servlet.view.JstlView" />
+					<property name="prefix" value="/page/" />
+					<property name="suffix" value=".jsp"></property>
+				</bean>
+				<bean class="com.winxuan.framework.springmvc.view.json.JsonViewResolver">
+					<property name="prefix" value="/json/" />
+					<property name="cache" value="false" />
+				</bean>
+				<bean class="com.winxuan.framework.springmvc.view.json.JsonpViewResolver">
+					<property name="prefix" value="/json/" />
+					<property name="cache" value="false" />
+				</bean>
+				<bean class="com.winxuan.framework.springmvc.view.excel.ExcelViewResolver">
+					<property name="prefix" value="/excel/" />
+					<property name="suffix" value=".xls"/>
+					<property name="cache" value="false" />
+				</bean>
+                <bean class="com.winxuan.framework.springmvc.view.txt.TxtViewResolver">
+                    <property name="prefix" value="/ftl/" />
+                    <property name="suffix" value=".ftl"/>
+                    <property name="cache" value="false" />
+                    <property name="mediaType" value="text/csv"/>
+                    <property name="charset" value="gbk"/>
+                    <property name="fileSuffix" value=".csv"/>
+                </bean>
+			</list>
+		</property>
+	</bean>
+
+</beans>

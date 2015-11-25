@@ -1,0 +1,7 @@
+div.text{position:absolute;top:0px;left:0px;width:700px;border:2px solid #F08300;background-color:white;display:none;}
+div.text div.header{background-color:#F08300;color:white;height:30px;font-weight:bolder;}
+div.text div.button{width:98%;padding:4px;text-align:right;}
+div.text textarea.content{width:98%;}
+div.text input.title{font-size:12px;width:90%;height:18px;padding:0px;}
+div.text div.loaddiv{position:absolute;top:0px;left:0px;width:100%;height:100%;background-color:rgba(0,0,0,0.3);display:none;}
+div.text div.loaddiv p{position:absolute;top:40%;left:40%;}

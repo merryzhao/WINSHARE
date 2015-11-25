@@ -1,0 +1,469 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, D:/Program Files/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 33, ../sass/screen.scss */
+html, body, div.layout, #map-canvas {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+}
+#map-canvas {
+  display: none;
+}
+/* line 39, ../sass/screen.scss */
+.hidden {
+  visibility: hidden;
+}
+
+/* line 42, ../sass/screen.scss */
+.visible {
+  visibility: visible;
+}
+
+/* line 46, ../sass/screen.scss */
+div.layout {
+  position: relative;
+  background: #C6000B;
+  font-family: Arial,"Microsoft Yahei";
+  overflow: hidden;
+}
+/* line 51, ../sass/screen.scss */
+div.layout aside, div.layout footer {
+  -moz-border-radius: 5px 5px;
+  -webkit-border-radius: 5px 5px;
+  -khtml-border-radius: 5px 5px;
+  -o-border-radius: 5px 5px;
+  border-radius: 5px 5px;
+  border: 3px rgba(157, 160, 159, 0.75) solid;
+  border-top-color: rgba(157, 160, 159, 0.5);
+  border-bottom-color: rgba(157, 160, 159, 0.5);
+  border-left-color: rgba(157, 160, 159, 0.5);
+  border-right-color: rgba(157, 160, 159, 0.5);
+}
+/* line 58, ../sass/screen.scss */
+div.layout aside {
+  float:left;
+  width: 264px;
+  padding: 10px;
+  margin:0 5px;
+  background: rgba(243, 239, 230, 0.75);
+}
+/* line 61, ../sass/screen.scss */
+div.layout footer {
+  position: absolute;
+  top: 630px;
+  left: 50%;
+  margin-left:-117px;
+  width: 234px;
+  padding: 10px;
+  background: rgba(243, 239, 230, 0.75);
+  background: white url(images/notice.gif) no-repeat 10px 10px;
+}
+/* line 64, ../sass/screen.scss */
+div.layout footer div {
+  margin-left: 24px;
+  border-left: 1px solid #ddd;
+}
+dl.count-down{
+  width:460px;
+  margin: 10px auto;
+}
+dl.count-down:after{
+  display: block;
+  clear: both; content: '';
+  visibility:hidden; height: 0;
+}
+/* line 71, ../sass/screen.scss */
+dl.count-down dt {
+  width:180px;
+  font-weight: bolder;
+  padding: 0 20px;
+  height: 34px;
+  line-height:34px;
+  font-size: 20px;
+  color: white;
+  background: url(images/icon-time.png) no-repeat 2px 10px;
+  float: left;
+}
+dl.count-down dd {
+  width:240px;
+  float: left;
+  height: 34px;
+}
+/* line 80, ../sass/screen.scss */
+dl.count-down dd ul {
+  background: #555;
+  height: 34px;
+  clear: both;
+  line-height: 34px;
+  padding: 0 4px;
+  -moz-border-radius: 5px 5px;
+  -webkit-border-radius: 5px 5px;
+  -khtml-border-radius: 5px 5px;
+  -o-border-radius: 5px 5px;
+  border-radius: 5px 5px;
+  border: 1px #555555 solid;
+}
+/* line 87, ../sass/screen.scss */
+dl.count-down dd ul li {
+  float: left;
+  margin: 0 2px;
+  color: white;
+  font-size: 14px;
+}
+/* line 93, ../sass/screen.scss */
+dl.count-down dd ul li.num {
+  font-size: 24px;
+  text-align: center;
+  font-family: Arial;
+}
+/* line 100, ../sass/screen.scss */
+dl.count-down li.days {
+  width: 40px;
+}
+/* line 101, ../sass/screen.scss */
+dl.count-down li.hours, dl.count-down li.minutes, dl.count-down li.seconds {
+  width: 30px;
+}
+
+/* line 103, ../sass/screen.scss */
+div.history-list {
+  height: 204px;
+  border: 1px solid #c9c9c9;
+  margin: 0 1px;
+  background: #F5F3F0;
+}
+/* line 108, ../sass/screen.scss */
+div.history-list div.item {
+  padding: 0 5px;
+  height: 40px;
+  border-bottom: 1px solid #c9c9c9;
+}
+/* line 112, ../sass/screen.scss */
+div.history-list div.item ul, div.history-list div.item address {
+  height: 20px;
+  line-height: 20px;
+  clear: both;
+  position: relative;
+}
+/* line 113, ../sass/screen.scss */
+div.history-list div.item li {
+  float: left;
+}
+/* line 114, ../sass/screen.scss */
+div.history-list div.item .order {
+  color: #73A6D6;
+  width: 106px;
+}
+/* line 115, ../sass/screen.scss */
+div.history-list div.item .time {
+  color: #aaa;
+}
+/* line 116, ../sass/screen.scss */
+div.history-list div.item .price {
+  color: #E86977;
+  text-align: right;
+  width: 80px;
+}
+/* line 117, ../sass/screen.scss */
+div.history-list div.item label {
+  width: 60px;
+  height: 20px;
+  display: block;
+  overflow: hidden;
+}
+/* line 118, ../sass/screen.scss */
+div.history-list div.item p {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 120, ../sass/screen.scss */
+div.history-list div.item:last-child {
+  border-bottom: none;
+}
+
+/* line 124, ../sass/screen.scss */
+div.order-success {
+  background: url(images/order-success.png) no-repeat 0 0;
+}
+/* line 126, ../sass/screen.scss */
+div.order-success div {
+  color: #de192e;
+}
+
+/* line 130, ../sass/screen.scss */
+div.order-delivery {
+  background: url(images/order-delivery.png) no-repeat 0 0;
+}
+/* line 132, ../sass/screen.scss */
+div.order-delivery div {
+  color: #1d70c4;
+}
+
+/* line 136, ../sass/screen.scss */
+div.panel {
+  height: 367px;
+  margin: 10px 0;
+}
+/* line 139, ../sass/screen.scss */
+div.panel h2 {
+  height: 22px;
+  line-height: 20px;
+  padding: 0 8px;
+  color: white;
+}
+/* line 145, ../sass/screen.scss */
+div.panel div {
+  height: 86px;
+}
+/* line 147, ../sass/screen.scss */
+div.panel div p {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  padding: 0 10px;
+}
+/* line 153, ../sass/screen.scss */
+div.panel div em {
+  display: block;
+  text-align: center;
+  font-family: Arial;
+  margin-top: -5px;
+}
+/* line 161, ../sass/screen.scss */
+div.panel .count em {
+  font-size: 34px;
+}
+/* line 164, ../sass/screen.scss */
+div.panel .price em {
+  font-size: 28px;
+}
+
+/* line 168, ../sass/screen.scss */
+div.orderinfo {
+  color: #777;
+  border: solid #DE192E 2px;
+  background: white;
+  line-height: 18px;
+  padding: 5px;
+  position: relative;
+  font-family: "Microsoft Yahei";
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 5px 5px;
+  -webkit-border-radius: 5px 5px;
+  -khtml-border-radius: 5px 5px;
+  -o-border-radius: 5px 5px;
+  border-radius: 5px 5px;
+  border: 2px #de192e solid;
+}
+/* line 178, ../sass/screen.scss */
+div.orderinfo span.status {
+  margin-left: 5px;
+}
+/* line 181, ../sass/screen.scss */
+div.orderinfo img {
+  margin-top: 2px;
+  float: left;
+}
+/* line 185, ../sass/screen.scss */
+div.orderinfo span.saleprice {
+  color: #E86977;
+}
+/* line 188, ../sass/screen.scss */
+div.orderinfo span.orderid {
+  color: #73A6D6;
+}
+/* line 191, ../sass/screen.scss */
+div.orderinfo span.status {
+  color: #B91A2C;
+}
+
+/* line 195, ../sass/screen.scss */
+div.orderinfo:before, div.orderinfo:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+}
+
+/* line 200, ../sass/screen.scss */
+div.orderinfo:before {
+  border-top: 7px solid transparent;
+  border-right: 7px solid #DE192E;
+  border-bottom: 7px solid transparent;
+  left: -8px;
+  top: 10px;
+}
+
+/* line 207, ../sass/screen.scss */
+div.orderinfo:after {
+  border-top: 5px solid transparent;
+  border-right: 5px solid #DE192E;
+  border-bottom: 5px solid transparent;
+  left: -6px;
+  top: 11px;
+}
+#curtain{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+/* line 215, ../sass/screen.scss */
+div.backimg {
+  margin-top: 2px;
+  float: left;
+  width: 13px;
+  height: 14px;
+}
+
+/* line 221, ../sass/screen.scss */
+.info8002 {
+  background-image: url(images/8004.png);
+}
+
+/* line 225, ../sass/screen.scss */
+.info8003 {
+  background-image: url(images/8003.gif);
+}
+
+/* line 229, ../sass/screen.scss */
+.info8004 {
+  background-image: url(images/8004.png);
+}
+
+/* line 233, ../sass/screen.scss */
+.info8005 {
+  background-image: url(images/8005.png);
+}
+
+/* line 237, ../sass/screen.scss */
+.info8011 {
+  background-image: url(images/8011.png);
+}
+
+/**libin**/
+div.layout .content{
+  width: 960px;
+  margin: 50px auto;
+}
+div.layout .progressBar {
+  float:left;
+  height:413px;
+  width: 180px;
+  padding: 0;
+  color: #8c1d23;
+  font-weight:bold;
+  text-align:center;
+  background: rgba(243, 239, 230, 0);
+}
+div.target-list {
+  height: 364px;
+  border: 1px solid #c9c9c9;
+  margin: 0 1px;
+  background: #F5F3F0;
+}
+div.target-list div.item {
+  padding: 0 5px;
+  height: 40px;
+  border-bottom: 1px solid #c9c9c9;
+}
+div.target-list div.item ul, div.target-list div.item address {
+  height: 20px;
+  line-height: 20px;
+  clear: both;
+  position: relative;
+}
+div.target-list div.item li {
+  float: left;
+}
+div.target-list div.item .order {
+  color: #73A6D6;
+  width: 106px;
+}
+div.target-list div.item .date {
+  color: #aaa;
+}
+div.target-list div.item .price {
+  color: #E86977;
+  text-align: right;
+  width: 80px;
+}
+div.target-list div.item:last-child {
+  border-bottom: none;
+}
+div#theme{
+	text-align: center;
+	font-size: 60px;
+  	color: #fdf403;
+  	line-height: 100px;
+}
+

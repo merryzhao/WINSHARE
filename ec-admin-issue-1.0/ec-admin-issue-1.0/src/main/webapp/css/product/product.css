@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+.table_title{
+	width:100%;
+	background-color:#00FFFF;
+	text-align:left;	
+}
+table{
+	text-align:left;
+}
+th{
+	width:80px;
+	margin:20px auto;
+}
+tr{
+	margin-bottom:10px;
+}
+td{
+	margin-right:20px;
+}

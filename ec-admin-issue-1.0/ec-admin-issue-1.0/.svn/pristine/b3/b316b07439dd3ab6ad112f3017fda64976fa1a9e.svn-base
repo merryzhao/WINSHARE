@@ -1,0 +1,23 @@
+textarea.query_list{vertical-align:top;width: 200px;height: 60px;}
+input.date{width:80px;}
+table.query_condition{}
+table.query_condition tr{ height:40px;}
+table.query_condition .title{width:80px;}
+table.query_condition .button{width:50px;margin-top:0px;}
+table.query_condition .textarea{width:200px;}
+table.query_condition .content{width:180px;}
+table.query_condition .shortcontent{width:120px;}
+table.query_result{ margin-top: 10px; width:160%;}
+table.query_result th{background:#6293BB;color:#fff;font-weight:bolder;text-align:center;}
+table.query_result tr{height:30px;line-height:20px;border:1px solid #DFDFDF;text-align:center;}
+table.query_result tr.hover{background:#ffffe1}
+table.query_result .checkbox{width:20px;}
+table.query_result .shortcharacters{width:100px;}
+table.query_result .characters{width:120px;}
+table.query_result .longcharacters{width:220px;}
+table.query_result .longcharacters2{width:400px;}
+table.query_result .shortnumber{width:60px;}
+table.query_result .longnumber{width:100px;}
+table.query_result .longdate{width:140px;}
+table.query_result .operate{width:100px;}
+div.table{  overflow:auto;width:100%;}

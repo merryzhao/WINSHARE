@@ -1,0 +1,17 @@
+table.enum-table {	width: 90%; margin-left: 5%;margin-bottom: 5%;}
+table.enum-table tr.normal {	height: 30px;	line-height: 20px;	border: 1px solid #DFDFDF; text-align: center;}
+table.enum-table tr:HOVER {	background: #ffffe1}
+table.enum-table th {	background: #6293BB; height: 30px;	line-height: 20px;	color: #fff;	font-weight: bolder;	text-align: center;}
+table.enum-table .type {	width: 20%;	min-width: 80px;	margin-left: 20px;}
+table.enum-table .number {	width: 20%;	margin-left: 20px;}
+table.enum-table .name {	width: 20%;	margin-left: 50px;}
+table.enum-table .operator  {	width: 40%;	min-width: 120px;	margin-left: 20px;}
+table.enum-table tr.update { display: none;background: #FFE7BA;padding:0px;margin:0px; border: 1px solid #DFDFDF;}
+table.enum-table tr.add {display: none;background: #FFE7BA ;padding:0px;margin:0px; border: 1px solid #DFDFDF;}
+input.text{border:none; width: 100px;margin-left:10px; }
+select.isnot{border:none; margin-left:10px;}
+div.create {margin-left: 5%;margin-bottom: 10px;margin-top: 10px;}
+a.update{margin-right: 20px;}
+a.delete{margin-left: 20px;}
+button.save{margin-right: 20px;margin-left:50px;}
+button.cancel{margin-left: 20px;}

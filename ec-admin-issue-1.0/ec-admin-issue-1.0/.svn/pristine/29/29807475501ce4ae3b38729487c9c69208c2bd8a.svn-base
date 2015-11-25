@@ -1,0 +1,12 @@
+#search {
+	height:80px;
+}
+.conditions {
+	margin-left: 20px;
+}
+.conditionTable {
+	text-align: left;
+}
+select{
+	margin:0.5em 0 0 0;
+}

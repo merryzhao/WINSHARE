@@ -1,0 +1,39 @@
+#content-result {
+    height: 650px;
+    width: 800px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.row div {
+    display: inline-table;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.impTag {
+    color: #FF0000;
+}
+
+.errors {
+    background: none;
+    border: 0px;
+    color: #FF0000;
+}
+
+.frame-main {
+    margin: 0px auto;
+}
+
+body{
+	text-align:left;
+}
+body #content-result{
+	text-align:left;
+}

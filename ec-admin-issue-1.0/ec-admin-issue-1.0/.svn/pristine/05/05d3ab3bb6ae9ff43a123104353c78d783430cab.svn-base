@@ -1,0 +1,9 @@
+result
+message
+presentBatchs
+presentBatchs\[\d+\]
+presentBatchs\[\d+\]\.id
+presentBatchs\[\d+\]\.batchTitle
+presentBatchs\[\d+\]\.value
+presentBatchs\[\d+\]\.productType
+presentBatchs\[\d+\]\.orderBaseAmount

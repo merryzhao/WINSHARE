@@ -1,0 +1,38 @@
+/*regist*/
+body{font-family:Arial,"宋体",Lucida,Verdana,Helvetica,sans-serif;font-size:12px;color:#333;line-height:150%;}
+#regist .mt{height:33px;background:url(i/tit_regist.jpg) repeat-x 0 -34px;}
+#regist .mt h2{float:left;height:33px;padding-left:15px;background:url(i/tit_regist.jpg) no-repeat 0 0;line-height:33px;}
+#regist .mt span{float:right;height:33px;line-height:33px;text-align:right;}
+#regist .mt b{float:right;width:10px;height:33px;background:url(i/tit_regist.jpg) no-repeat 0 -68px;}
+#regist .mc{padding:15px 20px 20px;border:solid #D1D1D1;border-width:0 1px 1px;}
+#regist .tab{height:29px;overflow:visible;padding-left:300px;margin-bottom:25px;border-bottom:1px solid #FFCC66;}
+#regist .tab li{width:102px;padding-top:3px;height:27px;font-size:14px;text-align:center;line-height:27px;color:#F79100;}
+#regist .tab .curr{position:relative;background:url(i/bg_regist.jpg) no-repeat 0 -83px;font-weight:bold;z-index:10;color:#a0410a;}
+#regist .tab .line{background:url(i/bg_shortcut_line.jpg) no-repeat right 7px;}
+#regist .tab a:link,#regist .tab a:visited{display:block;overflow:hidden;width:74px;height:23px;margin:0 auto;line-height:23px;}
+#regist .tab a:hover,#regist .tab a:active{background:url(i/bg_regist.jpg) no-repeat -167px 0;color:#fff;text-decoration:none;}
+*html #regist .tab{overflow:hidden;}
+#regist .item{padding-top:5px;height:50px;line-height:26px;}
+#regist .item a:link,#regist .item a:visited{text-decoration:underline;}
+#regist .label{width:300px;text-align:right;font-size:14px;}
+#regist .text{width:240px;height:26px;padding:4px 3px;border:1px solid #bbb;font-size:14px;font-family:arial,"宋体";}
+#regist .text-1{width:100px;}
+#regist .blank{width:16px;height:16px;margin:2px 5px 0;}
+#regist .img img{height:26px;margin:0 5px;}
+#regist .succeed{background:url(i/pwdstrength.gif) no-repeat -105px 0;}
+#regist .btn-regist{width:166px;height:32px;background:url(i/bg_regist.jpg) no-repeat 0 0;font-size:14px;font-weight:bold;color:#fff;}
+
+#regist .pwdbg{background:#FFF8EB;}
+#regist .focus{color:#999;line-height:22px;*line-height:20px;}
+#regist .null,#regist .error{color:red;line-height:22px;*line-height:20px;}
+#regist .checkbox{margin-top:6px;*margin-top:2px;}
+#regist #referrer{color:#999;font-size:12px;}
+#pwdstrength{color:#999;line-height:22px;padding-right:10px;}
+#pwdstrength b{float:left;width:104px;height:13px;overflow:hidden;margin-top:5px;*margin-top:3px;}
+.strengthA b{background:url(i/pwdstrength.gif) no-repeat 0 0;}
+.strengthB b{background:url(i/pwdstrength.gif) no-repeat 0 -13px;}
+.strengthC b{background:url(i/pwdstrength.gif) no-repeat 0 -26px;}
+#protocol-con{width:600px;height:80px;margin:0 auto;border:1px solid #ccc;padding:8px;overflow-y:scroll;color:#666;}
+/*-moz-*/
+@-moz-document url-prefix(){#regist .btn-regist{padding-bottom:5px;}}
+@-moz-document url-prefix(){#regist .checkbox{margin-top:7px;}}

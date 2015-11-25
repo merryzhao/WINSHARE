@@ -1,0 +1,78 @@
+div.codeFormAndNone {
+	background: #FFE7BA;
+	font-weight: bolder;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #DFDFDF;
+	display: none;
+}
+
+div.codeParentAdd {
+	font-weight: bolder;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+div.codeParentAddOuterNone {
+	background: #FFE7BA;
+	display: none;
+}
+
+div.codeChild {
+	font-weight: bolder;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #DFDFDF;
+}
+
+div.codeChildEnd {
+	font-weight: bolder;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 5px;
+}
+
+div.codeChildoperate {
+	position: absolute;
+	display: none;
+}
+
+label.codeName {
+	
+}
+
+label.codeDescription {
+	position: absolute;
+	left: 25%;
+}
+
+label.codeAvailable {
+	position: absolute;
+	color: #4876FF;
+	left: 70%;
+}
+
+a.codeUpdate {
+	position: absolute;
+	color: #4876FF;
+	left: 78%;
+}
+
+a.codeUp {
+	position: absolute;
+	color: #4876FF;
+	left: 85%;
+	margin-top:3px;
+}
+a.codeDown {
+	position: absolute;
+	color: #4876FF;
+	left: 90%;
+	margin-top:3px;
+}

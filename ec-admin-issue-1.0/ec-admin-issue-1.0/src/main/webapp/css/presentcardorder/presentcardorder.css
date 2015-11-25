@@ -1,0 +1,31 @@
+table.cardorder_detail {
+	width: 100%;
+}
+
+table.cardorder_detail tr {
+	height: 30px;
+}
+
+table.cardorder_detail th {
+	height: 35px;
+	background: #6293BB;
+}
+
+table.cardorder_detail tr:HOVER {
+	background: #ffffe1
+}
+
+table.cardorder_detail td {
+	border: 1px solid #DFDFDF;
+}
+
+table.cardorder_detail .title {
+	width: 20%;
+}
+
+table.cardorder_detail .content {
+	width: 30%;
+}
+div.dialog{
+	font-size: 15px; font-weight:bold;
+}

@@ -1,0 +1,149 @@
+<html>
+<head>
+	<meta charset="utf-8">
+		<link   rel="stylesheet" href="registerV.css"/>
+		<style type="text/css">
+			.highlight1{border:1px solid #EFA100;outline:2px solid #FFDC97;*border:2px solid #ffcc66;*padding:3px 2px;}
+			.highlight2{border:1px solid #f00;outline:1px solid #FFC1C1;color:#f00;}
+			.null,  .error {
+			    color: red;
+			    line-height: 22px;
+			    font-family: Arial,"宋体",Lucida,Verdana,Helvetica,sans-serif;
+    			font-size: 12px;
+			}
+		</style>
+		 <script type="text/javascript" src="jquery-1.5.1.js"></script>
+		<script type="text/javascript" src="wxValidate.js" ></script>
+		<script >
+		//验证文本
+		var validatePrompt={
+				pwd:{
+					onFocus:"6-16位字符，可由英文、数字及“_”、“-”组成",
+					succeed:"",
+					isNull:"请输入密码",
+					error:{
+						badLength:"密码长度只能在6-16位字符之间",
+						badFormat:"密码只能由英文、数字及“_”、“-”组成"
+					}
+				},
+				pwd2:{
+					onFocus:"请再次输入密码",
+					succeed:"",
+					isNull:"请输入密码",
+					error:{
+						badLength:"密码长度只能在6-16位字符之间",
+						badFormat2:"两次输入密码不一致",
+						badFormat1:"密码只能由英文、数字及“_”、“-”组成"
+					}
+				}
+		};
+		</script>
+		
+		<script>
+		var validateFunction={
+				pwd:function(option){
+					var str1=option.value;
+					var str2=$("#pwd2").val();
+					var format=validateRules.isPwd(option.value);
+					var length=validateRules.betweenLength(option.value,6,16);
+					if(!length){
+						validateSettings.error.run(option,option.prompts.error.badLength);
+					}else{
+						if(!format){
+							validateSettings.error.run(option,option.prompts.error.badFormat);
+						}
+						else{
+							validateSettings.succeed.run(option);	
+						} 
+					}
+					if (str2!=""){
+						$("#pwd2").wxValidate(validatePrompt.pwd2,validateFunction.pwd2,true);
+					}
+				},
+				pwd2:function(option){
+					var str1=option.value;
+					var str2=$("#pwd").val();
+					var length=validateRules.betweenLength(option.value,6,16);
+					var format2=validateRules.isPwd2(str1,str2);
+					var format1=validateRules.isPwd(str1);
+					if (!length){
+						validateSettings.error.run(option,option.prompts.error.badLength);
+					}else{
+						if (!format1){
+							validateSettings.error.run(option,option.prompts.error.badFormat1);
+						}else{
+							if(!format2){
+								validateSettings.error.run(option,option.prompts.error.badFormat2);
+							}
+							else{
+								validateSettings.succeed.run(option);
+							}
+						}
+					}
+				}
+		};
+		</script>
+
+		<script type="text/javascript">
+
+		$.extend(wxValidateFunction,{
+			FORM_validate:function(){
+				  $("#pwd").wxValidate(validatePrompt.pwd,validateFunction.pwd,true)
+			      $("#pwd2").wxValidate(validatePrompt.pwd2,validateFunction.pwd2,true);
+				  return wxValidateFunction.FORM_submit(["#pwd","#pwd2"])
+			}		 
+		}); 
+		
+		$(document).ready(function(){
+			  $("#pwd").wxValidate(validatePrompt.pwd,validateFunction.pwd)
+		      $("#pwd2").wxValidate(validatePrompt.pwd2,validateFunction.pwd2);
+			  
+			  
+			//调用
+			$("#registsubmit").click(function() {
+				var flag = wxValidateFunction.FORM_validate(["#pwd","#pwd2"]);
+				alert(flag);
+			});
+			
+		});
+		</script>
+</head>
+<body>	                
+	<div class="w" id="regist">
+	<div class="mc">
+		<form id="formpersonal" method="POST" onsubmit="return false;">
+		    <div class="form">
+			  
+			<div class="item">
+					    <span class="label">设置密码：</span>
+					    <div class="fl">
+						    <input type="password" tabindex="2" class="text" name="pwd" id="pwd">
+						    <label class="blank" id="pwd_succeed"></label>
+						    <span class="clr"></span>
+						    <label id="pwd_error"></label>
+					    </div>
+				    </div>
+				    
+				    <div class="item">
+					    <span class="label">确认密码：</span>
+					    <div class="fl">
+						    <input type="password" tabindex="3" class="text" name="pwd2" id="pwd2">
+						    <label class="blank" id="pwd2_succeed"></label>
+						    <span class="clr"></span>
+						    <label id="pwd2_error"></label>
+					    </div>
+				    </div>
+			    
+				<br/>
+			    <div class="item">
+				     <span class="label">&nbsp;</span>
+				     <input type="button"   id="registsubmit"  value="提交" tabindex="8" />
+			    </div>
+    			
+		    </div>
+		
+		</form>	 
+   </div>
+</div>
+</body>
+</html>

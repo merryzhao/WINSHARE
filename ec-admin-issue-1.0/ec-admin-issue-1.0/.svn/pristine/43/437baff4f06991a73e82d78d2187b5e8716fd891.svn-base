@@ -1,0 +1,8 @@
+channelList
+channelList.id
+channelList.name
+channelList.parent
+channelList\[\d+\]
+channelList\[\d+\].id
+channelList\[\d+\].name
+channelList\[\d+\].parent

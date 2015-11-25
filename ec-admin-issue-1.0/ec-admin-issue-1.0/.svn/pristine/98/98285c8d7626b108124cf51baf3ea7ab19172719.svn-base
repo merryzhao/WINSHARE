@@ -1,0 +1,209 @@
+<html>
+<head>
+	<meta charset="utf-8">
+		<link   rel="stylesheet" href="registerV.css"/>
+		<style type="text/css">
+			.highlight1{border:1px solid #EFA100;outline:2px solid #FFDC97;*border:2px solid #ffcc66;*padding:3px 2px;}
+			.highlight2{border:1px solid #f00;outline:1px solid #FFC1C1;color:#f00;}
+			.null,  .error {
+			    color: red;
+			    line-height: 22px;
+			    font-family: Arial,"宋体",Lucida,Verdana,Helvetica,sans-serif;
+    			font-size: 12px;
+			}
+		</style>
+		 <script type="text/javascript" src="jquery-1.5.1.js"></script>
+		<script type="text/javascript" src="wxValidate.js" ></script>
+		<script >
+		//验证文本
+		var validatePrompt={
+			username:{
+				onFocus:"4-20位字符，可由中文、英文、数字及“_”、“-”组成",
+				succeed:"",
+				isNull:"请输入用户名",
+				error:""
+			},
+			purpose:{
+				onFocus:"",
+				succeed:"",
+				isNull:"请选择爱好",
+				error:""
+			},
+			companyarea:{
+				onFocus:"",
+				succeed:"",
+				isNull:"请选择所在地",
+				error:""
+			},
+			sex:{
+				onFocus:"",
+				succeed:"",
+				isNull:"请选择性别",
+				error:""
+			}
+		};
+		</script>
+		
+		<script>
+		var validateFunction={
+		purpose:function(option){
+			var purpose=$("input:checkbox[@name='purposetype']");
+			if (wxValidateFunction.checkGroup(purpose)){
+				validateSettings.succeed.run(option);	
+			}else{
+				validateSettings.error.run(option,option.prompts.isNull);
+			}	
+		},
+		sex:function(option){
+			if(wxValidateFunction.checkSelectGroup($("sex").children())){
+				validateSettings.succeed.run(option);	
+			}else{
+				validateSettings.error.run(option,option.prompts.isNull);
+			}
+		}
+	};
+		</script>
+
+		<script type="text/javascript">
+
+		$.extend(wxValidateFunction,{
+			FORM_validate:function(){
+				  $("#username").wxValidate(validatePrompt.username,wxValidateFunction.notNull,true);
+				  $("#purpose").wxValidate(validatePrompt.purpose,validateFunction.purpose,true);
+				  $("#hncompanyarea").wxValidate(validatePrompt.companyarea,wxValidateFunction.notNull,true); 
+				  $("#sex").wxValidate(validatePrompt.sex,validateFunction.sex,true);
+				  return wxValidateFunction.FORM_submit(["#username","#purpose",,"#hncompanyarea",,"#sex"])
+			}		 
+		}); 
+
+		
+			$(document).ready(function(){
+				  $("#username").wxValidate(validatePrompt.username,wxValidateFunction.notNull);
+				  $("#sex").wxValidate(validatePrompt.sex,validateFunction.sex);
+				  $("input:checkbox[@name='purposetype']").bind("click",function(){
+						var value1=$("#purpose").val();
+						var value2=$(this).val();
+						if ($(this).attr("checked")==true){
+							if (value1.indexOf(value2)==-1){
+								$("#purpose").val(value1+value2);
+								$("#purpose").attr("sta",2);
+								$("#purpose_error").html("");
+							}
+						}else{
+							if (value1.indexOf(value2)!=-1){
+								value1=value1.replace(value2,"");
+								$("#purpose").val(value1);
+								if ($("#purpose").val()==""){
+									$("#purpose").attr("sta",0);
+								}
+							}
+						}
+					});
+				
+					
+					$("select[areamark='hncompanyarea']").bind("change",function(){
+						var elements=$("select[areamark='hncompanyarea']");
+						if (wxValidateFunction.checkSelectGroup(elements)){
+							$("#hncompanyarea").val("123");
+							$("#hncompanyarea").attr("sta",2);
+							$("#hncompanyarea_error").html("");
+						}else{
+							$("#hncompanyarea").val("");
+							$("#hncompanyarea").attr("sta",0);
+						}
+					});
+					
+					
+					
+				//调用
+				$("#registsubmit").click(function() {
+					var flag = wxValidateFunction.FORM_validate(["#username","#purpose",,"#hncompanyarea",,"#sex"]);
+					alert(flag);
+				});
+				
+			});
+		</script>
+</head>
+<body>	                
+	<div class="w" id="regist">
+	<div class="mc">
+		<form id="formpersonal" method="POST" onsubmit="return false;">
+		    <div class="form">
+			    <div class="item">
+				    <span class="label">用户名：</span>
+				    <div class="fl">
+					    <input type="text" id="username" name="username" class="text" tabindex="1" />
+					    <label id="username_succeed" class="blank"></label>
+					    <span class="clr"></span>
+					    <div id="username_error"></div>
+				    </div>
+			    </div>
+			  
+			    <div class="item">
+				<span class="label">爱好：</span>
+				<div class="fl">
+				    <input type="checkbox" name="purposetype" class="checkbox"  id="purpose1">
+				    <label for="purpose1" class="pad">DOTA</label>
+				    <input type="checkbox" value="2" runant="server" name="purposetype" class="checkbox" tabindex="13" id="purpose2">
+				    <label for="purpose2" class="pad">3C</label>
+				    <input type="checkbox" value="3" runant="server" name="purposetype" class="checkbox" tabindex="13" id="purpose3">
+				    <label for="purpose3" class="pad">造房子</label>
+			        <input type="hidden" value="" id="purpose"  >
+					<label class="blank" id="purpose_succeed"></label>
+					<span class="clr"></span>
+					<label id="purpose_error" class="null"></label>
+				</div>
+			</div>
+			
+			<div class="item">
+				<span class="label"><b class="ftx04">*</b>所在地：</span>
+				<div class="fl">
+				    <span class="fl">
+                    <select name="companyprovince" id="companyprovince" tabindex="11" rel="select" areamark="hncompanyarea" class="mar">
+                        <option  value="-1">请选择</option><option value="1">北京</option><option value="2">上海</option><option value="3">天津</option>
+					</select>
+                    </span>
+					<span class="fl"><select name="companycity" id="companycity" tabindex="11" rel="select" areamark="hncompanyarea" class="mar">
+					<option  value="-1">请选择</option><option value="1">北京</option><option value="2">上海</option><option value="3">天津</option>
+					</select>
+					</span>
+					<span class="fl"><select tabindex="11" rel="select" areamark="hncompanyarea" name="companyarea" id="companyarea">
+					<option  value="-1">请选择</option><option value="1">北京</option><option value="2">上海</option><option value="3">天津</option>
+					</select>
+					</span>
+					<input type="hidden" id="hncompanyarea"  > 
+                    <input type="hidden" id="hprov">
+					<label class="blank" id="hncompanyarea_succeed"></label>
+					<span class="clr"></span>
+					<label id="hncompanyarea_error" class="null"></label>
+				</div>
+			</div>
+			
+			<div class="item">
+				<span class="label"><b class="ftx04">*</b>性别：</span>
+				<div class="fl">
+				    <span class="fl">
+                    <select name="sex" id="sex" tabindex="11"  class="mar">
+                        <option selected="" value="-1">请选择</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+					</select>
+                    </span>
+					<label class="blank" id="sex_succeed"></label>
+					<span class="clr"></span>
+					<label id="sex_error" class="null"></label>
+				</div>
+			</div>
+			
+			    <div class="item">
+				     <span class="label">&nbsp;</span>
+				     <input type="button"   id="registsubmit"  value="提交" tabindex="8" />
+			    </div>
+    			
+		    </div>
+		
+		</form>	 
+   </div>
+</div>
+</body>
+</html>

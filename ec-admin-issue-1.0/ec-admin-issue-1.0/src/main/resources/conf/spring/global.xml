@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName">
+	<aop:aspectj-autoproxy/>
+	<bean id="config"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="order" value="1" />
+		<property name="locations">
+			<list>
+				<value>classpath:core.properties</value>
+				<value>classpath:conf/config.properties</value>
+			</list>
+		</property>
+		<property name="ignoreResourceNotFound" value="false" />
+		<property name="ignoreUnresolvablePlaceholders" value="true"></property>
+	</bean>
+	<!-- 
+	<bean id="readDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver">
+        </property>
+        <property name="url" value="${readMysql.url}"></property>
+        <property name="username" value="${readMysql.username}"/>
+        <property name="password" value="${readMysql.password}"/>
+		 <property name="maxActive" value="10000" /> 
+         <property name="maxIdle" value="30" /> 
+         <property name="minIdle" value="2" /> 
+         <property name="maxWait" value="600000" /> 
+         <property name="testOnBorrow" value="true"/> 
+         <property name="testWhileIdle" value="true"/> 
+     <property name="validationQuery" value="select 1 from dual"/> 
+    </bean>  
+    -->
+ <!--   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver">
+        </property>
+        <property name="url" value="${writeMysql.url}"></property>
+        <property name="username" value="${writeMysql.username}"/>
+        <property name="password" value="${writeMysql.password}"/>
+		 <property name="maxActive" value="10000" /> 
+         <property name="maxIdle" value="30" /> 
+         <property name="minIdle" value="2" /> 
+         <property name="maxWait" value="600000" /> 
+         <property name="testOnBorrow" value="true"/> 
+         <property name="testWhileIdle" value="true"/> 
+     <property name="validationQuery" value="select 1 from dual"/> 
+    </bean>  -->
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>java:jdbc/mysql-write</value>
+		</property>
+	</bean> 
+    
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">  
+       <property name="dataSource" ref="dataSource" />  
+       <property name="hibernateProperties">
+           <props>				
+				<prop key="hibernate.dialect">com.winxuan.ec.support.web.hibernate.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory</prop>
+				<prop key="hibernate.connection.release_mode">after_transaction</prop>
+				
+				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+			
+				<prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>
+				<prop key="hibernate.memcached.memcacheClientFactory">net.rubyeye.xmemcached.utils.hibernate.XmemcachedClientFactory</prop>
+				<prop key="hibernate.memcached.servers">${hibernate.memcached.servers}</prop>
+				<prop key="hibernate.memcached.keyStrategy">com.googlecode.hibernate.memcached.HashCodeKeyStrategy</prop>
+				<prop key="hibernate.memcached.readBufferSize">131072</prop>
+				<prop key="hibernate.memcached.operationTimeout">3000</prop>
+				<prop key="hibernate.memcached.hashAlgorithm">KETAMA_HASH</prop>
+				<prop key="hibernate.memcached.commandFactory">TextCommandFactory</prop>
+				<prop key="hibernate.memcached.sessionLocator">KetamaMemcachedSessionLocator</prop>
+				<prop key="hibernate.memcached.clearSupported">false</prop>
+				<prop key="hibernate.memcached.cacheTimeSeconds">1800</prop>
+				<prop key="hibernate.memcached.connectionPoolSize">1</prop>
+				<prop key="hibernate.memcached.mergeFactor">50</prop>
+				<!--<prop key="hibernate.memcached.dogpilePrevention">true</prop>
+				<prop key="hibernate.memcached.dogpilePrevention.expirationFactor">2</prop>-->
+				<prop key="hibernate.memcached.com.winxuan.ec.model.area.Area.cacheTimeSeconds">86400</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.category.Category.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.category.McCategory.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.channel.Channel.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.code.Code.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.delivery.DeliveryCompany.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.delivery.DeliveryInfo.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.delivery.DeliveryType.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.payment.Payment.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductMeta.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductMetaEnum.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.authority.Resource.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.authority.ResourceGroup.cacheTimeSeconds">604800</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.Product.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductDescription.cacheTimeSeconds">21600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductRecommendation.cacheTimeSeconds">21600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductExtend.cacheTimeSeconds">21600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductImage.cacheTimeSeconds">21600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.shop.Shop.cacheTimeSeconds">21600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.tag.TagItem.cacheTimeSeconds">21600</prop>
+				<!--<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductSale.cacheTimeSeconds">3600</prop>-->
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductSalePerformance.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductVersionItem.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductWarehouse.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductSaleRank.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.cm.Fragment.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.cm.Text.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.cm.News.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.cm.Element.cacheTimeSeconds">3600</prop>
+				<prop key="hibernate.memcached.com.winxuan.ec.model.cm.Link.cacheTimeSeconds">3600</prop>
+			</props>
+       </property>
+        <property name="packagesToScan">
+       <list>
+            <value>com.winxuan.ec.model.*</value>
+             <value>com.winxuan.api.model.*</value>
+        </list>
+      </property>    
+      <property name="eventListeners">
+       		<map key-type="java.lang.String">
+				<entry key="flush-entity"  >
+					<bean class="com.winxuan.ec.support.hibernate.listener.MrFlushEntityEventListener"/>
+				</entry>
+			</map>
+       </property>
+    </bean>
+    
+      <bean id="dataSourceLog" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url" value="${log.url}"></property>
+		<property name="username" value="${log.username}" />
+		<property name="password" value="${log.password}" />
+		<property name="maxActive" value="10000" />
+		<property name="maxIdle" value="30" />
+		<property name="minIdle" value="2" />
+		<property name="maxWait" value="600000" />
+		<property name="testOnBorrow" value="true" />
+		<property name="testWhileIdle" value="true" />
+	    <property name="validationQuery" value="select 1 from dual"/> 
+	</bean>
+	
+	<bean id="sessionFactoryLog" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">  
+       <property name="dataSource" ref="dataSourceLog" />  
+       <property name="hibernateProperties">
+           <props>				
+				<prop key="hibernate.dialect">com.winxuan.ec.support.web.hibernate.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.CacheProvider</prop>
+				<prop key="hibernate.connection.release_mode">after_transaction</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+			</props>
+       </property>
+       <property name="packagesToScan">
+       <list>
+            <value>com.winxuan.ec.model.*</value>
+        </list>
+      </property>    
+    </bean>
+    
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+    	<property name="sessionFactory" ref="sessionFactoryLog"></property>
+	</bean>
+    
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager" />
+         
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+	
+	<bean id="hibernateLazyResolver"  class="com.winxuan.framework.util.hibernate.HibernateLazyResolver" />
+	<bean class="com.winxuan.framework.dynamicdao.AutoInjectDynamicDaoBeanPostProcessor" /> 
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" />
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:defaultEncoding="utf-8" p:maxUploadSize="104857600" /> 
+	<!-- <bean id="dataSource" class="com.winxuan.framework.readwritesplitting.DataSourceProxy"></bean> 
+	
+	 <bean id="dataSourceInterceptor" class="com.winxuan.framework.readwritesplitting.DataSourceInterceptor" />
+	<bean
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<value>dataSourceInterceptor</value>
+			</list>
+		</property>
+		<property name="beanNames">
+			<value>*Service</value>
+		</property>
+	</bean> -->
+	<bean id="applicationScopeLoader" class="com.winxuan.ec.support.web.pojo.ApplicationScopeLoader">
+		<property name="loadTargetClass">  
+    		<map>  
+    			 <entry key="Code" value="com.winxuan.ec.model.code.Code"/>  
+    		</map>  
+  		</property>  
+	</bean>
+	
+	  <bean id="dataSource_zq" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver">
+		</property>
+		<property name="url" value="jdbc:oracle:thin:@10.100.1.74:1521:ZQW"></property>
+		<property name="username" value="wmsdata" />
+		<property name="password" value="wmsdata" />
+		<property name="maxActive" value="10000" />
+		<property name="maxIdle" value="30" />
+		<property name="minIdle" value="2" />
+		<property name="maxWait" value="600000" />
+		<property name="testOnBorrow" value="true" />
+		<property name="testWhileIdle" value="true" />
+		<property name="validationQuery" value="select 1 from dual" />
+	</bean>
+	<bean id="zqJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" >
+		<property name="dataSource" ref="dataSource_zq"></property>
+	</bean>
+	
+	 <bean name="objectCacheMemcachedClientBuilder" class="net.rubyeye.xmemcached.XMemcachedClientBuilder">
+
+       <constructor-arg>
+                <list>
+                        <bean class="java.net.InetSocketAddress">
+                                <constructor-arg>
+                                        <value>${xmemcached.memcached.object.cache.host1}</value>
+                                </constructor-arg>
+                                <constructor-arg>
+                                        <value>${xmemcached.memcached.object.cache.port1}</value>
+                                </constructor-arg>
+                        </bean>
+                        <bean class="java.net.InetSocketAddress">
+                                <constructor-arg>
+                                        <value>${xmemcached.memcached.object.cache.host2}</value>
+                                </constructor-arg>
+                                <constructor-arg>
+                                        <value>${xmemcached.memcached.object.cache.port2}</value>
+                                </constructor-arg>
+                        </bean>
+                </list>
+        </constructor-arg>
+
+		<property name="connectionPoolSize" value="${xmemcached.memcached.connectionPoolSize}"></property>
+		<property name="connectTimeout" value="10000"></property>
+		<property name="commandFactory">
+		        <bean class="net.rubyeye.xmemcached.command.TextCommandFactory"></bean>
+		</property>
+
+		<property name="sessionLocator">
+		        <bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator"></bean>
+		</property>
+		<property name="transcoder">
+		        <bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder" />
+		</property>
+	</bean>
+	
+	
+	<!-- Use factory bean to build memcached client -->
+    <bean name="objectxMemcachedClient" factory-bean="objectCacheMemcachedClientBuilder"
+            factory-method="build" destroy-method="shutdown"/>
+	
+	<bean name="objectCacheManager" class="com.winxuan.framework.cache.CacheManagerXmemcachedImpl">
+		<property name="opTimeout" value="5000"></property>
+		<property name="mergeFactor" value="50"></property>
+		<property name="xMemcachedClient">
+			<ref bean="objectxMemcachedClient"/>
+		</property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,4 @@
+channel
+channel\[\d+\]
+channel\[\d+\]\.id
+channel\[\d+\]\.name

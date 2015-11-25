@@ -1,0 +1,15 @@
+result
+message
+orderRulesBeans
+orderRulesBeans\[\d+\]
+orderRulesBeans\[\d+\]\.minAmount
+orderRulesBeans\[\d+\]\.manner
+orderRulesBeans\[\d+\]\.orderPresnetBeans
+orderRulesBeans\[\d+\]\.orderPresnetBeans\[\d+\]
+orderRulesBeans\[\d+\]\.orderPresnetBeans\[\d+\]\.presentNum
+orderRulesBeans\[\d+\]\.orderPresnetBeans\[\d+\]\.presentBatch
+orderRulesBeans\[\d+\]\.orderPresnetBeans\[\d+\]\.presentBatch.id
+orderRulesBeans\[\d+\]\.orderPresnetBeans\[\d+\]\.presentBatch.batchTitle
+orderRulesBeans\[\d+\]\.orderPresnetBeans\[\d+\]\.presentBatch.value
+orderRulesBeans\[\d+\]\.orderPresnetBeans\[\d+\]\.presentBatch.productType
+orderRulesBeans\[\d+\]\.orderPresnetBeans\[\d+\]\.presentBatch.orderBaseAmount

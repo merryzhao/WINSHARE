@@ -1,0 +1,54 @@
+*html{
+background-image:url(about:blank);
+background-attachment:fixed;
+}
+
+
+BODY {
+	FONT: 12px/1.5 tahoma,arial
+}
+
+
+#rankbar {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; MARGIN-TOP: 10px; Z-INDEX: 50; BACKGROUND: #f3f3f3; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ddd 1px solid; POSITION: relative; HEIGHT: 28px
+}
+#rankbar .sticky  {
+	MARGIN-TOP: 10px; Z-INDEX: 90000; POSITION: relative; TOP: 0px; moz-box-shadow: 0 1px 5px rgba(0,0,0,0.1); webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.1); box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+
+}
+#rankbar-holder {
+	DISPLAY: none
+}
+.sticky-close {
+	DISPLAY: none
+}
+.sticky .sticky-close {
+	DISPLAY: block
+}
+
+#rankbar-form .old-srp {
+	MARGIN-TOP: 0px; BORDER-BOTTOM-COLOR: #ccc; BORDER-TOP-COLOR: #ddd
+}
+#rankbar .iw {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 0px solid; OVERFLOW: hidden; BORDER-LEFT: #fff 1px solid; BORDER-BOTTOM: #fff 0px solid; HEIGHT: 28px
+}
+#rankbar .tgl-switch A:hover {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffff',EndColorStr='#ffffd3'); ZOOM: 1; BACKGROUND-COLOR: #ffd
+}
+
+#rankbar .tgl-switch A SPAN {
+	BACKGROUND-POSITION: 100% -2094px; ; BACKGROUND-REPEAT: no-repeat
+}
+
+#rankbar .tgl-switch {
+	RIGHT: 8px; WIDTH: 88px; POSITION: absolute; TOP: 5px; HEIGHT: 19px
+}
+#rankbar .tgl-switch A {
+	BORDER-RIGHT: #a6a6a6 1px solid; BORDER-TOP: #a6a6a6 1px solid; DISPLAY: block; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#fefefe',EndColorStr='#f2f2f2'); BORDER-LEFT: #a6a6a6 1px solid; COLOR: #404040; LINE-HEIGHT: 17px; BORDER-BOTTOM: #a6a6a6 1px solid; ZOOM: 1; BACKGROUND-COLOR: #f4f4f4
+}
+#rankbar .tgl-switch A SPAN {
+	PADDING-RIGHT: 4px; BACKGROUND-POSITION: 0px -1998px; DISPLAY: block; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; HEIGHT: 17px
+}
+#rankbar .tgl-switch-righton A SPAN {
+	BACKGROUND-POSITION: 0px -2014px
+}

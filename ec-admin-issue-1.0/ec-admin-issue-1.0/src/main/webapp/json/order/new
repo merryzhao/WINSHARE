@@ -1,0 +1,11 @@
+deliveryType
+deliveryType\[\d+\]
+deliveryType\[\d+\]\.deliveryType
+deliveryType\[\d+\]\.deliveryType.id
+deliveryType\[\d+\]\.deliveryType.name
+isSupportcod
+payment
+payment\[\d+\]
+payment\[\d+\]\.id
+payment\[\d+\]\.name
+free

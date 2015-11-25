@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd"
+	default-autowire="byName">
+	
+	<bean id="scheduler"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="schedulerName" value="${quartz.name}"/>
+		<property name="configLocation" value="classpath:conf/quartz-config.properties"/>
+		<property name="startupDelay" value="30" />
+		<property name="autoStartup" value="true"/>
+		<property name="overwriteExistingJobs" value="true" />
+		<property name="waitForJobsToCompleteOnShutdown" value="false"/>
+		<property name="applicationContextSchedulerContextKey" value="applicationContext" />
+		<property name="globalJobListeners">
+			<list>
+				<ref bean="simpleProcessJobListener" />
+			</list>
+		</property>
+		<property name="globalTriggerListeners">
+			<list>
+				<ref bean="simpleProcessTriggerListener" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="simpleProcessTriggerListener" class="com.winxuan.ec.task.support.quartz.listener.SimpleProcessTriggerListener">
+	</bean>
+</beans>

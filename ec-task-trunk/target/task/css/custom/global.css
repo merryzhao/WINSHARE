@@ -1,0 +1,30 @@
+
+body{  
+  -webkit-text-size-adjust:none;   
+} 
+
+/* css for table */
+.ui-grid { width: 100%; padding: .4em;  background-image: none; }
+.ui-grid .ui-grid-content { width: 100%; border-collapse: collapse; }
+.ui-grid .oo {background-color:#f7f7f7;border:1px #CADBF0 solid}
+.ui-grid .gg {border:1px #CADBF0 solid}
+.ui-grid table tbody td, .ui-grid .ui-grid-header, .ui-grid table thead a { padding: .4em;  }
+.ui-grid table tbody td {  text-align: right; font-weight: normal;  }
+.ui-grid .ui-grid-header, .ui-grid .ui-grid-footer { padding: .8em .4em; text-align: center; }
+.ui-grid .ui-grid-footer { background-image: none; font-weight: normal; text-align: left; }
+.ui-grid table thead a { display: block;  }
+.ui-grid .ui-icon { float: right; }
+.ui-grid .ui-grid-paging { float: right; }
+.ui-grid .ui-grid-paging-prev { float: left; width: 16px; height: 16px; }
+.ui-grid .ui-grid-paging-next { float: right; width: 16px; height: 16px; }
+.ui-grid .ui-grid-results {  }
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+
+
+.tab-loading{width:50px;height:50px; background:#fff url(/images/custom/loading.gif) no-repeat 4px 4px;color:#d56a00;}

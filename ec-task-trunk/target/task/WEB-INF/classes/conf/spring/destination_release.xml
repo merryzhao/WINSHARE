@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+	
+<!-- 	<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="failover:(tcp://10.1.2.25:62626,tcp://10.1.2.70:62626)" />
+	</bean>
+	 -->
+	  <bean id="connectionFactory"
+	class="org.springframework.jms.connection.CachingConnectionFactory">
+		<property name="sessionCacheSize" value="5" />
+		<property name="targetConnectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL" value="failover:(failover:(tcp://10.100.15.183:61616))" />
+				<property name="useAsyncSend" value="true" />  
+			</bean>
+		</property>
+	</bean>
+     
+       <bean id="franchiseeSinProductQueue" class="org.apache.activemq.command.ActiveMQQueue">
+                <constructor-arg value="franchisee.product.single"/>
+     </bean>
+     	
+		<bean id="franchiseeCatProductQueue" class="org.apache.activemq.command.ActiveMQQueue">
+                <constructor-arg value="franchisee.product.category"/>
+     </bean>
+	 
+</beans>

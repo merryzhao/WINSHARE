@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd"
+	default-autowire="byName">
+
+	<bean id="config"
+		class="com.winxuan.framework.spring.beans.factory.config.DataSourcePlaceholderConfigurer">
+		<property name="order" value="1" />
+		<property name="locations">
+			<list>
+				<value>classpath:core.properties</value>
+				<value>classpath:conf/config.properties</value>
+			</list>
+		</property>
+		<property name="ignoreResourceNotFound" value="false" />
+		<property name="ignoreUnresolvablePlaceholders" value="true"/>
+		<property name="dataSource" ref="dataSource" />
+		<property name="databaseKeys">
+			<list>
+				<value>core</value>
+				<value>task</value>
+				<value>feed</value>
+			</list>
+		</property>
+		<property name="addressSelector" value="true" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory
+				</prop>
+				<prop key="hibernate.connection.release_mode">after_transaction</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+<!-- 				<prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop> -->
+<!-- 				<prop key="hibernate.memcached.memcacheClientFactory">net.rubyeye.xmemcached.utils.hibernate.XmemcachedClientFactory</prop> -->
+<!-- 				<prop key="hibernate.memcached.servers">10.1.2.49:11211 10.1.2.49:11211</prop> -->
+<!-- 				<prop key="hibernate.memcached.keyStrategy">com.googlecode.hibernate.memcached.HashCodeKeyStrategy</prop> -->
+<!-- 				<prop key="hibernate.memcached.readBufferSize">131072</prop> -->
+<!-- 				<prop key="hibernate.memcached.operationTimeout">2000</prop> -->
+<!-- 				<prop key="hibernate.memcached.hashAlgorithm">KETAMA_HASH</prop> -->
+<!-- 				<prop key="hibernate.memcached.commandFactory">TextCommandFactory</prop> -->
+<!-- 				<prop key="hibernate.memcached.sessionLocator">KetamaMemcachedSessionLocator</prop> -->
+<!-- 				<prop key="hibernate.memcached.clearSupported">false</prop> -->
+<!-- 				<prop key="hibernate.memcached.cacheTimeSeconds">1800</prop> -->
+<!-- 				<prop key="hibernate.memcached.present.cacheTimeSeconds">3600</prop> -->
+<!-- 				<prop key="hibernate.memcached.dogpilePrevention">true</prop> -->
+<!-- 				<prop key="hibernate.memcached.dogpilePrevention.expirationFactor">2</prop>  -->
+				
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.area.Area.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.category.Category.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.category.McCategory.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.channel.Channel.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.code.Code.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.delivery.DeliveryCompany.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.delivery.DeliveryInfo.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.delivery.DeliveryType.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.payment.Payment.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductMeta.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductMetaEnum.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.authority.Resource.cacheTimeSeconds">604800</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.authority.ResourceGroup.cacheTimeSeconds">604800</prop> -->
+				
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.Product.cacheTimeSeconds">21600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductDescription.cacheTimeSeconds">21600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductRecommendation.cacheTimeSeconds">21600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductExtend.cacheTimeSeconds">21600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductImage.cacheTimeSeconds">21600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.tag.TagItem.cacheTimeSeconds">21600</prop> -->
+				
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductSale.cacheTimeSeconds">3600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductSalePerformance.cacheTimeSeconds">3600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductVersionItem.cacheTimeSeconds">3600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductWarehouse.cacheTimeSeconds">3600</prop> -->
+<!-- 				<prop key="hibernate.memcached.com.winxuan.ec.model.product.ProductSaleRank.cacheTimeSeconds">3600</prop> -->
+			</props>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.winxuan.ec.model.*</value>
+				<value>com.winxuan.ec.task.model.*</value>
+			</list>
+		</property>
+	</bean>
+
+		<bean id="franchiseeSessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceFranchisee" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory
+				</prop>
+				<prop key="hibernate.connection.release_mode">after_transaction</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+	</props>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.winxuan.franchisee.model.*</value>
+			</list>
+		</property>
+		<property name="annotatedClasses">
+	<list>
+		<value>com.winxuan.ec.model.payment.Payment</value>
+		<value>com.winxuan.ec.model.code.Code</value>
+		<value>com.winxuan.ec.model.delivery.DeliveryType</value>
+		<value>com.winxuan.ec.model.delivery.DeliveryCompany</value>
+	</list>
+      </property>
+	</bean>
+
+	<!--bean id="jotm" class="com.winxuan.ec.task.support.jta.JotmFactoryBean" /-->
+	<!-- <bean id="autoInjectDynamicDaoBeanPostProcessor"
+		class="com.winxuan.framework.dynamicdao.AutoInjectDynamicDaoBeanPostProcessor">
+	</bean> -->
+
+	<bean id="autoInjectDynamicDaoBeanPostProcessor"
+	class="com.winxuan.framework.dynamicdao.AutoInjectDynamicDaoBeanPostProcessor">
+		<property name="sessionFactoryMap">
+			<map key-type="java.lang.String">
+				<entry key="com.winxuan.franchisee.dao" value-ref="franchiseeSessionFactory" />
+				<entry key="com.winxuan.ec.dao" value-ref="sessionFactory" />
+				<entry key="com.winxuan.ec.task.dao" value-ref="sessionFactory" />
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="hibernateLazyResolver"
+		class="com.winxuan.framework.util.hibernate.HibernateLazyResolver" />
+	
+	<bean id="taskDetails" class="com.winxuan.ec.task.support.quartz.TaskDetails">
+	</bean>
+   <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="1"/>
+        <property name="maxPoolSize" value="2"/>
+		<property name="keepAliveSeconds" value="180" />
+        <property name="queueCapacity" value="9999"/>
+    </bean>
+	
+
+	
+	<bean id="freeMarkerConfiguration" class="freemarker.template.Configuration">
+        <!--property name="directoryForTemplateLoading" value="${index.templatedirectory}" /-->
+    </bean>
+</beans>
